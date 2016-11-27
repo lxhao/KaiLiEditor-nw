@@ -17,7 +17,7 @@ http://static.500d.me/resources/500d/editresume/tooltip.js?v=4004
 http://static.500d.me/resources/500d/editresume/Sortable.min.js?v=4004
 http://static.500d.me/resources/500d/editresume/dropdown.js?v=4004
 http://static.500d.me/resources/500d/editresume/modal.js?v=4009
-http://static.500d.me/resources/500d/editresume/resume.js?v=4014
+http://static.500d.me/resources/500d/editresume/editer.js?v=4014
 http://static.500d.me/resources/500d/editresume/colpick.js
 http://static.500d.me/resources/500d/editresume/edit.js?v=4015
 http://static.500d.me/resources/500d/editresume/jquery-ui.min.js

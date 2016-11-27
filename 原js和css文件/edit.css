@@ -6,12 +6,6 @@ html, body {
     color: #333;
 }
 
-@font-face {
-    font-family: wbdfont;
-    src: url(../fonts/iconfont.eot?v=4001);
-    src: url(../fonts/iconfont.eot?#iefix) format('embedded-opentype'), url(../fonts/iconfont.woff) format('woff'), url(../fonts/iconfont.ttf) format('truetype'), url(../fonts/iconfont.svg#wbdfont) format('svg')
-}
-
 .wbdfont {
     font-family: wbdfont !important;
     font-size: 16px;
