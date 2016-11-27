@@ -1,0 +1,12 @@
+{
+  "name": "KailiEditor",
+  "chromium-args": "--allow-running-insecure-content --ignore-certificate-errors",
+  "version": "0.1.0",
+  "onlineURL": "kailiEditor.html",
+  "main": "index.html",
+  "window": {
+    "width": 1024,
+    "height": 688,
+    "show":true
+  }
+}
