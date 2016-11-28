@@ -74,8 +74,8 @@ var localLang = {
 
 var fs = require("fs");
 var defaultSettings = {
-    "topSpace": 1.5,
-    "bottomSpace": 1.5,
+    "topSpace": 2.5,
+    "bottomSpace": 2.5,
     "leftSpace": 1.9,
     "rightSpace": 1.9,
     "lineSize": 1,
@@ -469,14 +469,14 @@ $(document).ready(function () {
 
         var priorNode = null, tags = null;
         //模板节点
-        var templateNode = document.body.getElementsByClassName("template");
+        var templateNode = document.body.getElementsByClassName("container");
         templateNode = templateNode[0];
         for (var i = 0; i < nodesCount; i++) {
             var xmlNode = reportContent.children[i];
             console.log(xmlNode.tagName + "的属性:");
             /**
-             * 判断当前文档是否有加载当前节点, 有加载则使用直接替换innerHTML
-             * 没有加载则添加当前节点
+             * 判断编辑器是否有从xml文件加载过当前节点, 有加载则使用直接替换内容
+             * 没有加载则添加一个节点
              */
             priorNode = tags && tags[0] ? tags[0] : editerDocument.body.firstChild;
             tags = editerDocument.getElementsByClassName(xmlNode.tagName);
@@ -491,6 +491,8 @@ $(document).ready(function () {
                 } else {
                     //扩展一个子元素
                     var cloneNode = tags[temp].cloneNode(true);
+                    $(cloneNode).children(".value").html("");
+                    $(cloneNode).children(".name").html("");
                     $(tags[temp]).after(cloneNode);
                     cloneNode.style.display = "inline-block";
                     tags[temp].style.display = "inline-block";
@@ -500,15 +502,19 @@ $(document).ready(function () {
             } else {
                 //模板文件不存在匹配的节点
                 var cloneNode = templateNode.cloneNode(true);
-                $(cloneNode).addClass(xmlNode.tagName);
-                $(priorNode).after(cloneNode);
-                updateNode(cloneNode, xmlNode, basePath);
+                var addedNode = $(cloneNode).children("div").get(0);
+                $(addedNode).addClass(xmlNode.tagName);
+                //parentNode定位到class为container的父元素, next定位到分割线
+                $(priorNode.parentNode).next().after(cloneNode);
+                $(cloneNode).after($(".line").get(0).cloneNode(true));
+                updateNode(addedNode, xmlNode, basePath);
+                priorNode = addedNode;
             }
         }
         //自动匹配图片宽度
-        if (true) {
-            autoFitImgsWidth();
-        }
+        // if (true) {
+        //     autoFitImgsWidth();
+        // }
     }
 
 
@@ -536,19 +542,16 @@ $(document).ready(function () {
 
         //根据用户选择加载xml文件中设置的属性
         var importAttrs = $("#importAttrs").eq(0).attr('checked') == 'checked';
-        if (importAttrs) {
-            var attrs = xmlTag.attributes;
-            var len = attrs.length;
-            for (var j = 0; j < len; j++) {
-                console.log(attrs[j].name + ":" + attrs[j].value);
-                if (attrs[j].name == 'name') {
-                    //class为name的子节点存在与不存在分别处理
-                    if (toTag.getElementsByClassName("name").length > 0) {
-                        $(toTag).children(".name").html(attrs[j].value + "：");
-                    }
-                } else {
-                    $(toTag).children(".value").css(attrs[j].name, attrs[j].value);
-                }
+        var attrs = xmlTag.attributes;
+        var len = attrs.length;
+        for (var j = 0; j < len; j++) {
+            console.log(attrs[j].name + ":" + attrs[j].value);
+            if (attrs[j].name == 'name' && toTag.getElementsByClassName("name").length > 0) {
+                //class为name的子节点存在与不存在分别处理
+                $(toTag).children(".name").html(attrs[j].value + "：");
+            }
+            if (importAttrs) {
+                $(toTag).children(".value").css(attrs[j].name, attrs[j].value);
             }
         }
         toTag.setAttribute("updated", 'true');
@@ -569,7 +572,7 @@ $(document).ready(function () {
     function resumeModal() {
         //更换模板
         $(".changeModalBtn").click(function () {
-//			layer.msg("正在研发中  敬请期待");
+            //layer.msg("正在研发中  敬请期待");
             $(".changeModal").stop().fadeIn(300);
             var display = $('.changeModal').css('display');
             if (display == 'none') {
@@ -737,6 +740,7 @@ $(document).ready(function () {
             reload_template_list();
         }
     });
+
     //排序
     $(".templateSort a").click(function () {
         if ($(this).hasClass("current")) {
@@ -749,7 +753,8 @@ $(document).ready(function () {
             reload_template_list();
         }
     });
-    //简历模板点击事件
+
+    //模板点击事件
     $(".changeModal .zx-tag a").click(function () {
         $("#templateKeyword").val("");
         select_template_page = 1;
@@ -798,7 +803,7 @@ $(document).ready(function () {
         }
     };
 
-    //恢复默认设置
+//恢复默认设置
     $("#defaultSettings").click(function () {
         $("#topSpace").get(0).value = defaultSettings.topSpace;
         $("#bottomSpace").get(0).value = defaultSettings.bottomSpace;
@@ -809,7 +814,7 @@ $(document).ready(function () {
         $("#imgWidth").get(0).value = defaultSettings.imgWidth;
     });
 
-    //保存设置
+//保存设置
     $("#saveSettings").click(function () {
         var topSpace = $("#topSpace").get(0).value + "cm";
         var bottomSpace = $("#bottomSpace").get(0).value + "cm";
@@ -850,7 +855,7 @@ $(document).ready(function () {
         $('#settingsPage').modal('hide');
     });
 
-    //自动调整图片宽度
+//自动调整图片宽度
     function autoFitImgsWidth() {
         var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
 
@@ -879,6 +884,83 @@ $(document).ready(function () {
 
     }
 
+    /**
+     * html转换对象
+     * @type {string}
+     */
+    var htmlTransf = new Object({
+        _count: 0,
+        toHtml: function (filePath, html) {
+            fs.writeFile(filePath, html, function (err) {
+                if (err) {
+                    alert("保存失败!");
+                }
+            });
+        },
+
+        toPdf: function (filePath, html) {
+            if (filePath != null) {
+                try {
+                    var word = new ActiveXObject("Word.Application");
+                    var doc = word.Documents.Add("", 0, 1);
+                    var range = doc.Range(0, 1);
+                    var sel = document.body.createTextRange();
+                    try {
+                        sel.moveToElementText(content);
+                    } catch (notE) {
+                        alert("导出数据失败，没有数据可以导出。");
+                        window.close();
+                        return;
+                    }
+                    sel.select();
+                    sel.execCommand("Copy");
+                    range.Paste();
+                    // word.Application.Visible = true;// 控制word窗口是否显示
+                    doc.saveAs(filePath, 17); // 保存为pdf格式
+                    alert("导出成功");
+                } catch (e) {
+                    alert("导出数据失败，需要在客户机器安装Microsoft Office Word 2007以上版本，将当前站点加入信任站点，允许在IE中运行ActiveX控件。");
+                } finally {
+                    try {
+                        word.quit()
+                    } catch (ex) {
+                    }
+                }
+            }
+        },
+
+        toWord: function (filePath, html) {
+            if (filePath != null) {
+                try {
+                    var word = new ActiveXObject("Word.Application");
+                    var doc = word.Documents.Add("", 0, 1);
+                    var range = doc.Range(0, 1);
+                    var sel = document.body.createTextRange();
+                    try {
+                        sel.moveToElementText(content);
+                    } catch (notE) {
+                        alert("导出数据失败，没有数据可以导出。");
+                        window.close();
+                        return;
+                    }
+                    sel.select();
+                    sel.execCommand("Copy");
+                    range.Paste();
+                    // word.Application.Visible = true;// 控制word窗口是否显示
+                    doc.saveAs(filePath + "/导出测试.doc"); // 保存
+                    alert("导出成功");
+                } catch (e) {
+                    alert("导出数据失败，需要在客户机器安装Microsoft Office Word(不限版本)，将当前站点加入信任站点，允许在IE中运行ActiveX控件。");
+                } finally {
+                    try {
+                        word.quit()
+                    } catch (ex) {
+                    }
+                }
+            }
+        }
+    });
+
     $(".saveBtn").click(function () {
         //当前html文件是否是首次保存
         if (true) {
@@ -887,22 +969,34 @@ $(document).ready(function () {
             var chooser = document.querySelector('#saveHtmlFile');
             chooser.addEventListener("change", function (evt) {
                 var filePath = this.value.toString();
-                fs.writeFile(filePath, editor.fullHtml(), function (err) {
-                    if (err) {
-                        alert("保存失败!");
-                    }
-                });
+                var html = editor.fullHtml();
+                htmlTransf.toHtml(filePath, html);
             });
         }
     });
 
-    KindEditor.ready(function () {
-        //页边距
-        var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
-        var editorBody = $(editerDocument.body);
-        editorBody.css("padding-left", defaultSettings.leftSpace + "cm");
-        editorBody.css("padding-right", defaultSettings.rightSpace + "cm");
-        editorBody.css("padding-top", defaultSettings.topSpace + "cm");
-        editorBody.css("padding-bottom", defaultSettings.bottomSpace + "cm");
+    /**
+     * 导出为pdf文件
+     */
+    $(".dlown_btn").click(function () {
+        $("#saveHtmlFile").click();
+        editor.sync();
+        var chooser = document.querySelector('#saveHtmlFile');
+        chooser.addEventListener("change", function (evt) {
+            //保存路径
+            var filePath = this.value.toString();
+            htmlTransf.toPdf(filePath, editor.fullHtml());
+        });
     });
-});
+
+// KindEditor.ready(function () {
+//     //页边距
+//     var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
+//     var editorBody = $(editerDocument.body);
+//     editorBody.css("padding-left", defaultSettings.leftSpace + "cm");
+//     editorBody.css("padding-right", defaultSettings.rightSpace + "cm");
+//     editorBody.css("padding-top", defaultSettings.topSpace + "cm");
+//     editorBody.css("padding-bottom", defaultSettings.bottomSpace + "cm");
+// });
+})
+;
