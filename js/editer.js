@@ -70,12 +70,19 @@ var localLang = {
     "mobile": {"type": "value", "zh": "联系方式：", "en": "Mobile :"},
     "email": {"type": "value", "zh": "邮箱", "en": "E-mail :"},
     "job": {"type": "value", "zh": "职业：", "en": "Job :"},
+    "examine_details": {"type": "value", "zh": "检查所见：", "en": "Examine Details :"},
+    "diagnosis": {"type": "value", "zh": "活检部位：", "en": "Diagnosis :"},
+    "exmaination_part": {"type": "value", "zh": "诊断：", "en": "Exmaination Part :"},
+    "suggestion": {"type": "value", "zh": "建议：", "en": "Suggestions :"},
+    "doctor": {"type": "value", "zh": "医生：", "en": "Doctor"},
+    "printed_time": {"type": "value", "zh": "打印时间：", "en": "Printed Time :"},
+    "declaration": {"type": "value", "zh": "声明：", "en": "Declaration :"},
 };
 
 var fs = require("fs");
 var defaultSettings = {
-    "topSpace": 2.5,
-    "bottomSpace": 2.5,
+    "topSpace": 1.5,
+    "bottomSpace": 1.5,
     "leftSpace": 1.9,
     "rightSpace": 1.9,
     "lineSize": 1,
@@ -424,6 +431,7 @@ $(document).ready(function () {
     chooser.addEventListener("change", function (evt) {
         // 检查文件是否选择:
         var filePath = this.value.toString();
+        this.value = null;
         console.log(filePath);
         //开发过程中做测试用,按下alt+r载入xml文件
         if (!filePath) {
@@ -838,7 +846,8 @@ $(document).ready(function () {
         });
 
         //图片间距, 宽度
-        var imgWidth = $("#imgWidth").get(0).value + "cm";
+        // var imgWidth = $("#imgWidth").get(0).value + "cm";
+        var imgWidth = "auto";
         var imgGap = $("#imgGap").get(0).value + "cm";
         imgNodes = $(editerDocument.body).find(".IMG1");
         imgNodes.each(function () {
@@ -965,7 +974,7 @@ $(document).ready(function () {
         //当前html文件是否是首次保存
         if (true) {
             $("#saveHtmlFile").click();
-            editor.sync();
+            KindEditor.sync('#editor_id');
             var chooser = document.querySelector('#saveHtmlFile');
             chooser.addEventListener("change", function (evt) {
                 var filePath = this.value.toString();
@@ -987,6 +996,11 @@ $(document).ready(function () {
             var filePath = this.value.toString();
             htmlTransf.toPdf(filePath, editor.fullHtml());
         });
+    });
+
+    $("#preview_btn").click(function () {
+        var nwPreviewBtn = window.editor.children(".ke-icon-preview");
+        nwPreviewBtn.fire("click");
     });
 
 // KindEditor.ready(function () {
