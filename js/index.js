@@ -52,9 +52,11 @@ function openAppWindow(onlineURL) {
         // nw.App.on('reopen', function () {
         //     win.show();
         // });
-        // tray.on('click', function () {
-        //     win.show();
-        // });
+        tray.on('click', function () {
+            win.show();
+        });
+
+        menuitems(win);
         // win.window.onload = function () {
         //     win.maximize();
         //     setTimeout(function () {
@@ -64,11 +66,34 @@ function openAppWindow(onlineURL) {
     });
 }
 
+function menuitems(win) {
+    var menu1 = new gui.Menu();
+    var submenu = new gui.Menu();
+    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box1'}));
+    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box2'}));
+    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box3'}));
+    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box4'}));
+    menu1.append(new gui.MenuItem({icon: 'imgs/cut.png', label: 'Cut'}));
+    menu1.append(new gui.MenuItem({icon: 'imgs/edit.png', label: 'Edit'}));
+    menu1.append(new gui.MenuItem({icon: 'imgs/email.png', label: 'Email'}));
+    menu1.append(new gui.MenuItem({icon: 'imgs/play.png', label: 'Play'}));
+    menu1.append(new gui.MenuItem({icon: 'imgs/tick.png', label: 'Tick'}));
+    menu1.append(new gui.MenuItem({type: 'separator'}));
+    menu1.append(new gui.MenuItem({icon: 'imgs/disk.png', label: 'Disk', submenu: submenu}));
+
+    win.window.document.body.addEventListener('contextmenu', function (ev) {
+        ev.preventDefault();
+        menu1.popup(ev.x, ev.y);
+        return false;
+    });
+
+}
+
 if (window.process) {
     mainWindow.maximize();
     openAppWindow(nw.App.manifest.onlineURL);
-    menu.append(new nw.MenuItem({label: 'Show Console', click: showDevTools}));
-    menu.append(new nw.MenuItem({label: 'Quit', click: quit}));
+    menu.append(new nw.MenuItem({label: '调试', click: showDevTools}));
+    menu.append(new nw.MenuItem({label: '退出', click: quit}));
     tray.menu = menu;
     settingShotcuts();
     process.on('uncaughtException', function (err) {

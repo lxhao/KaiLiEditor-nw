@@ -74,7 +74,7 @@ var localLang = {
     "diagnosis": {"type": "value", "zh": "活检部位：", "en": "Diagnosis :"},
     "exmaination_part": {"type": "value", "zh": "诊断：", "en": "Exmaination Part :"},
     "suggestion": {"type": "value", "zh": "建议：", "en": "Suggestions :"},
-    "doctor": {"type": "value", "zh": "医生：", "en": "Doctor"},
+    "doctor": {"type": "value", "zh": "医生：", "en": "Doctor :"},
     "printed_time": {"type": "value", "zh": "打印时间：", "en": "Printed Time :"},
     "declaration": {"type": "value", "zh": "声明：", "en": "Declaration :"},
 };
@@ -998,9 +998,11 @@ $(document).ready(function () {
         });
     });
 
+    //预览
     $("#preview_btn").click(function () {
-        var nwPreviewBtn = window.editor.children(".ke-icon-preview");
-        nwPreviewBtn.fire("click");
+        var editToolbar = window.editor.toolbar;
+        var editPreviewBtn = editToolbar.get("preview").children("div");
+        $(editPreviewBtn).trigger("click");
     });
 
 // KindEditor.ready(function () {
