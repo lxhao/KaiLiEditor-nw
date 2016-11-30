@@ -79,6 +79,11 @@ var localLang = {
     "declaration": {"type": "value", "zh": "声明：", "en": "Declaration :"},
 };
 
+var fileSplit = "\\";
+var OSX = process.platform;
+if (OSX == "linux" || OSX == "darwin") {
+    fileSplit = "/";
+}
 var fs = require("fs");
 var defaultSettings = {
     "topSpace": 1.5,
@@ -443,7 +448,7 @@ $(document).ready(function () {
 
     function readFileByPath(filePath) {
         var fileType = filePath.substring(filePath.lastIndexOf(".") + 1);
-        var basePath = filePath.substring(0, filePath.lastIndexOf("/") + 1);
+        var basePath = filePath.substring(0, filePath.lastIndexOf(fileSplit) + 1);
         if (fileType.toLocaleLowerCase() != "xml") {
             layer.msg("只支持xml文件格式！");
             return;
@@ -864,7 +869,7 @@ $(document).ready(function () {
         $('#settingsPage').modal('hide');
     });
 
-//自动调整图片宽度
+    //自动调整图片宽度
     function autoFitImgsWidth() {
         var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
 
@@ -907,66 +912,11 @@ $(document).ready(function () {
             });
         },
 
+
         toPdf: function (filePath, html) {
-            if (filePath != null) {
-                try {
-                    var word = new ActiveXObject("Word.Application");
-                    var doc = word.Documents.Add("", 0, 1);
-                    var range = doc.Range(0, 1);
-                    var sel = document.body.createTextRange();
-                    try {
-                        sel.moveToElementText(content);
-                    } catch (notE) {
-                        alert("导出数据失败，没有数据可以导出。");
-                        window.close();
-                        return;
-                    }
-                    sel.select();
-                    sel.execCommand("Copy");
-                    range.Paste();
-                    // word.Application.Visible = true;// 控制word窗口是否显示
-                    doc.saveAs(filePath, 17); // 保存为pdf格式
-                    alert("导出成功");
-                } catch (e) {
-                    alert("导出数据失败，需要在客户机器安装Microsoft Office Word 2007以上版本，将当前站点加入信任站点，允许在IE中运行ActiveX控件。");
-                } finally {
-                    try {
-                        word.quit()
-                    } catch (ex) {
-                    }
-                }
-            }
         },
 
         toWord: function (filePath, html) {
-            if (filePath != null) {
-                try {
-                    var word = new ActiveXObject("Word.Application");
-                    var doc = word.Documents.Add("", 0, 1);
-                    var range = doc.Range(0, 1);
-                    var sel = document.body.createTextRange();
-                    try {
-                        sel.moveToElementText(content);
-                    } catch (notE) {
-                        alert("导出数据失败，没有数据可以导出。");
-                        window.close();
-                        return;
-                    }
-                    sel.select();
-                    sel.execCommand("Copy");
-                    range.Paste();
-                    // word.Application.Visible = true;// 控制word窗口是否显示
-                    doc.saveAs(filePath + "/导出测试.doc"); // 保存
-                    alert("导出成功");
-                } catch (e) {
-                    alert("导出数据失败，需要在客户机器安装Microsoft Office Word(不限版本)，将当前站点加入信任站点，允许在IE中运行ActiveX控件。");
-                } finally {
-                    try {
-                        word.quit()
-                    } catch (ex) {
-                    }
-                }
-            }
         }
     });
 
@@ -984,26 +934,60 @@ $(document).ready(function () {
         }
     });
 
-    /**
-     * 导出为pdf文件
-     */
-    $(".dlown_btn").click(function () {
-        $("#saveHtmlFile").click();
-        editor.sync();
-        var chooser = document.querySelector('#saveHtmlFile');
-        chooser.addEventListener("change", function (evt) {
-            //保存路径
-            var filePath = this.value.toString();
-            htmlTransf.toPdf(filePath, editor.fullHtml());
-        });
-    });
-
     //预览
     $("#preview_btn").click(function () {
         var editToolbar = window.editor.toolbar;
         var editPreviewBtn = editToolbar.get("preview").children("div");
         $(editPreviewBtn).trigger("click");
     });
+
+    //打印
+    $("#printBtn").click(function () {
+        var editToolbar = window.editor.toolbar;
+        var editPreviewBtn = editToolbar.get("print").children("div");
+        $(editPreviewBtn).trigger("click");
+    });
+
+    //添加右击菜单
+    $(function () {
+        var gui = require('nw.gui');
+        var win = nw.Window.get();
+        var menu1 = new gui.Menu();
+        var windowProperties = {
+            width: nw.App.manifest.window.width,
+            height: nw.App.manifest.window.height,
+            min_width: nw.App.manifest.window.min_width,
+            min_height: nw.App.manifest.window.min_height
+        };
+        menu1.append(new gui.MenuItem({
+            icon: 'imgs/email.png', label: '新建窗口', click: function () {
+                openAppWindow(nw.App.manifest.onlineURL);
+            }
+        }));
+        menu1.append(new gui.MenuItem({
+            icon: 'imgs/cut.png', label: '重新载入', click: function () {
+                win.reload();
+            }
+        }));
+        win.window.addEventListener('contextmenu', function (ev) {
+            ev.preventDefault();
+            menu1.popup(ev.x, ev.y);
+            return false;
+        });
+
+        function openAppWindow(onlineURL) {
+            //加载编辑器页面
+            nw.Window.open(onlineURL, windowProperties, function (win) {
+                nw.App.on('reopen', function () {
+                    win.show();
+                });
+                // win.window.onload = function () {
+                //     win.maximize();
+                // };
+            });
+        }
+    });
+
 
 // KindEditor.ready(function () {
 //     //页边距

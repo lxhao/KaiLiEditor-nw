@@ -3343,7 +3343,7 @@
             return self;
         },
         hr: function () {
-            return this.inserthtml('<hr />');
+            return this.inserthtml('<hr class="line" width="100%" size="1pt" color="#3a95be"/>');
         },
         print: function () {
             this.win.print();

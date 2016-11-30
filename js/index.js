@@ -48,45 +48,17 @@ function quit() {
 function openAppWindow(onlineURL) {
     //加载编辑器页面
     nw.Window.open(onlineURL, windowProperties, function (win) {
-        win.maximize();
-        // nw.App.on('reopen', function () {
-        //     win.show();
-        // });
-        tray.on('click', function () {
+        nw.App.on('reopen', function () {
             win.show();
         });
+        // tray.on('click', function () {
+        //     win.show();
+        // });
 
-        menuitems(win);
-        // win.window.onload = function () {
-        //     win.maximize();
-        //     setTimeout(function () {
-        //         win.window.location.href = onlineURL;
-        //     }, 5000);
-        // };
+        win.window.onload = function () {
+            win.maximize();
+        };
     });
-}
-
-function menuitems(win) {
-    var menu1 = new gui.Menu();
-    var submenu = new gui.Menu();
-    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box1'}));
-    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box2'}));
-    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box3'}));
-    submenu.append(new gui.MenuItem({type: 'checkbox', label: 'box4'}));
-    menu1.append(new gui.MenuItem({icon: 'imgs/cut.png', label: 'Cut'}));
-    menu1.append(new gui.MenuItem({icon: 'imgs/edit.png', label: 'Edit'}));
-    menu1.append(new gui.MenuItem({icon: 'imgs/email.png', label: 'Email'}));
-    menu1.append(new gui.MenuItem({icon: 'imgs/play.png', label: 'Play'}));
-    menu1.append(new gui.MenuItem({icon: 'imgs/tick.png', label: 'Tick'}));
-    menu1.append(new gui.MenuItem({type: 'separator'}));
-    menu1.append(new gui.MenuItem({icon: 'imgs/disk.png', label: 'Disk', submenu: submenu}));
-
-    win.window.document.body.addEventListener('contextmenu', function (ev) {
-        ev.preventDefault();
-        menu1.popup(ev.x, ev.y);
-        return false;
-    });
-
 }
 
 if (window.process) {
