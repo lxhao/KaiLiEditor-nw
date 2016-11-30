@@ -2,11 +2,684 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8674766-3825-4163-8f1f-21f2df048f0d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp.net/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp.net/bin/LitJSON.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp.net/demo.aspx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp.net/file_manager_json.ashx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp.net/upload_json.ashx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp/JSON_2.0.4.asp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp/UpLoad_Class.asp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp/demo.asp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp/file_manager_json.asp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/asp/upload_json.asp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/_static/file.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/_static/firebug_upload_json.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/_templates/classy/layout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/_templates/classy/static/classy.css_t" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/_templates/classy/theme.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/ajax.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/changelog.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/classyext.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/cmd.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/colorpicker.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/conf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/core.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/dialog.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/editor.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/event.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/index.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/make.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/menu.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/node.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/option.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/plugin.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/qna.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/range.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/selector.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/tabs.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/theme.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/upgrade.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/upload.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/uploadbutton.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/usage.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/docs/widget.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/demo.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/file_manager_json.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/lib/commons-fileupload-1.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/lib/commons-io-1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/lib/json_simple-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/jsp/upload_json.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/kindeditor-all-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/kindeditor-all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lang/zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lang/zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/build.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/background.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/contentScript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug-lite-beta.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug24_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/firebug48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/googleChrome.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/buttonBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/buttonBgHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/detach.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/detachHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disableHover.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disableHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/downActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/downHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/errorIcon-sm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/errorIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/errorIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug-1.3a2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.IE6.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/group.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/infoIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/infoIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/loading_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/min.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/minHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/offHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/pixel_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/roundCorner.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/shadow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/shadow2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/shadowAlpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabHoverLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabHoverMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabHoverRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuCheckbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuPin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuRadio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuTarget.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuTargetHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorBorders.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorBorders.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorCorners.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorCorners.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/titlebarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/toolbarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tree_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tree_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/upActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/upHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/warningIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension-beta/skin/xp/warningIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/background.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/contentScript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug-lite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug24_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/firebug48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/googleChrome.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/buttonBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/buttonBgHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/detach.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/detachHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/disable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/disableHover.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/disableHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/downActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/downHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/errorIcon-sm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/errorIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/errorIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/firebug-1.3a2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.IE6.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/group.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/infoIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/infoIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/loading_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/min.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/minHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/offHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/pixel_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/roundCorner.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/shadow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/shadow2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/shadowAlpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabHoverLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabHoverMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabHoverRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuCheckbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuPin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuRadio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuTarget.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuTargetHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tabRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorBorders.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorBorders.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorCorners.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorCorners.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/titlebarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/toolbarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tree_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/tree_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/upActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/upHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/warningIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/chrome-extension/skin/xp/warningIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/compress.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/firebug-lite-beta.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/firebug-lite-debug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/build/firebug-lite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/plugin/proxy/proxy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/buttonBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/buttonBgHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/detach.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/detachHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/disable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/disableHover.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/disableHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/downActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/downHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/errorIcon-sm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/errorIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/errorIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/firebug.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/firebug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/firebug.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/group.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/infoIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/infoIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/loading_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/min.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/minHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/offHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/pixel_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/roundCorner.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/shadow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/shadow2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/shadowAlpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabHoverLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabHoverMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabHoverRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabMenuCheckbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabMenuPin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabMenuRadio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabMenuTarget.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabMenuTargetHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tabRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/textEditorBorders.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/textEditorBorders.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/textEditorCorners.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/textEditorCorners.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/titlebarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/toolbarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tree_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/tree_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/twistyClosed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/twistyOpen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/upActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/upHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/warningIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/classic/warningIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/buttonBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/buttonBgHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/closeHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/detach.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/detachHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/disable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/disableHover.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/disableHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/downActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/downHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/errorIcon-sm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/errorIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/errorIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/firebug.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/firebug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/firebug.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/group.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/infoIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/infoIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/loading_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/min.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/minHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/offHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/pixel_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/roundCorner.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/shadow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/shadow2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/shadowAlpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabHoverLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabHoverMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabHoverRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabMenuCheckbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabMenuPin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabMenuRadio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabMenuTarget.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabMenuTargetHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tabRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/textEditorBorders.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/textEditorBorders.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/textEditorCorners.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/textEditorCorners.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/titlebarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/toolbarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tree_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/tree_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/twistyClosed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/twistyOpen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/upActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/upHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/warningIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/light/warningIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/buttonBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/buttonBgHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/detach.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/detachHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/disable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/disableHover.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/disableHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/downActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/downHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/errorIcon-sm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/errorIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/errorIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/firebug-1.3a2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/firebug.IE6.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/firebug.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/firebug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/firebug.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/group.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/infoIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/infoIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/loading_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/min.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/minHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/offHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/pixel_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/roundCorner.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/shadow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/shadow2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/shadowAlpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabHoverLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabHoverMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabHoverRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabMenuCheckbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabMenuPin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabMenuRadio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabMenuTarget.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabMenuTargetHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tabRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/textEditorBorders.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/textEditorBorders.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/textEditorCorners.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/textEditorCorners.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/titlebarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/toolbarMid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tree_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/tree_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/upActive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/upHover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/warningIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/firebug-lite/skin/xp/warningIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/qunit/qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/lib/qunit/qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/php/JSON.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/php/demo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/php/file_manager_json.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/php/upload_json.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/anchor/anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/autoheight/autoheight.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/baidumap/baidumap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/baidumap/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/baidumap/map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/clearhtml/clearhtml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/code/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/code/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/code/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/emoticons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/100.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/101.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/102.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/103.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/104.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/105.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/106.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/107.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/108.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/109.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/110.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/111.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/112.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/113.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/114.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/115.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/116.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/117.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/118.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/119.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/120.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/121.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/122.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/123.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/124.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/125.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/126.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/127.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/128.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/129.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/130.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/131.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/132.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/133.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/134.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/15.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/17.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/18.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/19.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/20.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/21.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/22.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/23.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/24.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/25.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/26.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/27.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/28.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/29.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/30.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/31.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/32.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/33.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/34.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/35.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/36.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/37.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/38.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/39.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/40.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/41.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/42.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/43.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/44.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/45.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/46.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/47.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/48.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/49.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/50.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/51.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/52.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/53.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/54.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/55.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/56.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/57.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/58.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/59.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/60.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/61.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/62.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/63.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/64.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/65.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/66.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/67.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/68.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/69.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/7.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/70.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/71.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/72.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/73.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/74.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/75.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/76.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/77.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/78.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/79.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/8.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/80.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/81.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/82.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/83.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/84.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/85.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/86.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/87.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/88.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/89.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/9.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/90.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/91.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/92.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/93.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/94.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/95.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/96.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/97.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/98.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/99.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/emoticons/images/static.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/filemanager/filemanager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/filemanager/images/file-16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/filemanager/images/file-64.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/filemanager/images/folder-16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/filemanager/images/folder-64.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/filemanager/images/go-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/fixtoolbar/fixtoolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/flash/flash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/image/image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/image/images/align_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/image/images/align_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/image/images/align_top.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/image/images/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/insertfile/insertfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/lineheight/lineheight.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/link/link.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/map/map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/map/map.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/media/media.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/multiimage/images/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/multiimage/images/select-files-en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/multiimage/images/select-files-zh-CN.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/multiimage/images/swfupload.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/multiimage/multiimage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/pagebreak/pagebreak.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/plainpaste/plainpaste.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/preview/preview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/quickformat/quickformat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/table/table.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/template/html/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/template/html/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/template/html/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/template/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/plugins/wordpaste/wordpaste.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/cmd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/colorpicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/edit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/event.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/footer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/header.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/node.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/range.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/selector.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/toolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/uploadbutton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/src/widget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/cmd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/cmd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/core.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/data/logo_180_30.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/edit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/edit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/editor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/editor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/event.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/event.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/hidden.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/html.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/leak.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/navi.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/node.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/node.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/quirkmode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/range.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/range.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/remote.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/selector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/selector.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/toolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/toolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/total.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/KindEditorDriver.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/all-chrome.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/all-firefox.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/all-ie.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/all.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriver.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverBase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverElement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverEnvironment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverExceptions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverSession.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/WebDriverSimpleItem.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/php-webdriver/__init__.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/test-default.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/test-dialog.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/webdriver/test-unittest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/test/widget.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/common/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/common/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/common/flash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/common/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/common/media.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/common/rm.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/default/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/default/default.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/default/default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/qq/editor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/qq/qq.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kingeditor/themes/simple/simple.css" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/editer.js" afterPath="$PROJECT_DIR$/js/editor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/editer.js" afterPath="$PROJECT_DIR$/js/editer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/my_edit.css" afterPath="$PROJECT_DIR$/css/my_edit.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kailiEditor.html" afterPath="$PROJECT_DIR$/kailiEditor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingeditor/kindeditor-all.js" afterPath="$PROJECT_DIR$/kingeditor/kindeditor-all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/原js和css文件/address.txt" afterPath="$PROJECT_DIR$/原js和css文件/address.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/原js和css文件/down.txt" afterPath="$PROJECT_DIR$/原js和css文件/down.txt" />
     </list>
     <ignored path="KaiLiReport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,17 +701,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="kailiEditor.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="kailiEditor.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kailiEditor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="101" column="15" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="15" />
+            <state relative-caret-position="396">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,144 +759,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kindeditor-all.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kingeditor/kindeditor-all.js">
+      <file leaf-file-name="filename.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/filename.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="4509" column="47" selection-start-line="4509" selection-start-column="47" selection-end-line="4509" selection-end-column="47" />
-              <folding>
-                <marker date="1480490793983" expanded="true" signature="46783:46796" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="64468:64481" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="91314:91327" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="100476:100482" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="115037:115055" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="115169:115198" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="115309:115331" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="115531:115555" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="116306:116319" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="125788:125802" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="142141:142197" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="155092:155105" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="162238:162289" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="202978:202996" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="203029:203054" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="211547:211572" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="212243:212265" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="213477:213489" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="213586:213592" ph="©" />
-                <marker date="1480490793983" expanded="true" signature="234785:234798" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="235013:235025" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="238066:238084" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="238289:238301" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="238874:238926" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="240075:240139" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="240904:240956" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="242014:242032" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="242204:242216" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="242491:242516" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="246431:246454" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="246625:246650" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="248999:249017" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="249970:249995" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="257680:257698" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="265863:265876" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="265971:265982" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="266107:266119" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="266124:266130" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="266227:266233" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="266576:266587" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="266869:266880" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="274220:274233" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="274316:274329" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="274420:274431" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="274562:274574" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="274579:274585" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="274908:274919" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="275331:275346" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="275476:275487" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276180:276191" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276325:276337" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276426:276439" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276494:276507" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276802:276813" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276938:276950" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="276971:276977" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="287651:287664" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="287751:287762" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="287874:287886" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="287891:287897" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="287990:287996" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="288315:288326" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="288453:288465" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="293402:293426" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="294325:294338" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="294443:294454" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="294584:294596" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="294711:294722" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="297516:297529" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="297624:297635" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="297760:297772" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="297777:297783" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="297880:297886" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="298229:298240" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="298521:298532" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="313964:313977" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="354795:354820" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="355915:355933" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="355968:355987" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="356073:356098" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="357673:357691" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="357765:357790" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="360115:360131" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="362827:362840" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="362936:362947" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="363115:363121" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="363370:363381" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="363551:363557" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="363763:363769" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="363902:363908" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="364237:364248" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="364425:364431" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="364686:364697" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="365223:365234" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="365414:365420" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="365636:365647" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="373747:373753" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="376942:376955" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="377052:377063" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="377233:377239" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="377445:377451" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="377584:377590" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="377917:377928" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="378950:378961" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="379141:379147" ph="&amp;nbsp;" />
-                <marker date="1480490793983" expanded="true" signature="379363:379374" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="393546:393564" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="394249:394296" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="395750:395768" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="395803:395822" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="395922:395947" ph="..." />
-                <marker date="1480490793983" expanded="true" signature="396853:396901" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/editer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="450" column="74" selection-start-line="450" selection-start-column="74" selection-end-line="450" selection-end-column="74" />
+            <state relative-caret-position="132">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.js">
+      <file leaf-file-name="editor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="704">
+              <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -250,7 +800,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/原js和css文件/edit.css" />
-        <option value="$PROJECT_DIR$/css/my_edit.css" />
         <option value="$PROJECT_DIR$/css/document.css" />
         <option value="$PROJECT_DIR$/js/edit.js" />
         <option value="$PROJECT_DIR$/js/resume.js" />
@@ -260,8 +809,13 @@
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/editer.js" />
         <option value="$PROJECT_DIR$/kingeditor/plugins/preview/preview.js" />
-        <option value="$PROJECT_DIR$/kailiEditor.html" />
         <option value="$PROJECT_DIR$/kingeditor/kindeditor-all.js" />
+        <option value="$PROJECT_DIR$/css/my_edit.css" />
+        <option value="$PROJECT_DIR$/kindeditor/themes/default/default.css" />
+        <option value="$PROJECT_DIR$/kindeditor/plugins/image/image.js" />
+        <option value="$PROJECT_DIR$/kindeditor/kindeditor-all.js" />
+        <option value="$PROJECT_DIR$/kailiEditor.html" />
+        <option value="$PROJECT_DIR$/js/editor.js" />
       </list>
     </option>
   </component>
@@ -302,7 +856,7 @@
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
@@ -755,12 +1309,12 @@
       <workItem from="1480381835477" duration="13575000" />
       <workItem from="1480404977963" duration="1804000" />
       <workItem from="1480421500551" duration="12000" />
-      <workItem from="1480486191998" duration="2899000" />
+      <workItem from="1480486191998" duration="18719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73978000" />
+    <option name="totallyTimeSpent" value="89798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="36" width="1920" height="1044" extended-state="6" />
@@ -779,6 +1333,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -789,7 +1344,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -845,7 +1399,7 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -892,7 +1446,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/editer.js">
+    <entry file="file://$PROJECT_DIR$/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -917,7 +1471,7 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -964,7 +1518,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/editer.js">
+    <entry file="file://$PROJECT_DIR$/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -989,7 +1543,7 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1036,7 +1590,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/editer.js">
+    <entry file="file://$PROJECT_DIR$/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16192">
           <caret line="368" column="12" selection-start-line="368" selection-start-column="12" selection-end-line="368" selection-end-column="12" />
@@ -1061,7 +1615,7 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1122,7 +1676,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/editer.js">
+    <entry file="file://$PROJECT_DIR$/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3168">
           <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
@@ -1139,7 +1693,7 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1186,18 +1740,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/editer.js">
+    <entry file="file://$PROJECT_DIR$/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23408">
           <caret line="532" column="53" selection-start-line="532" selection-start-column="53" selection-end-line="532" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/my_edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1230,13 +1777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kingeditor/plugins/template/html/1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1265,13 +1805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/zxbj_base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/原js和css文件/edit.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1283,22 +1816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/editer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="450" column="74" selection-start-line="450" selection-start-column="74" selection-end-line="450" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,23 +1831,242 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingeditor/kindeditor-all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="4550" column="29" selection-start-line="4550" selection-start-column="29" selection-end-line="4550" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kindeditor/themes/default/background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kindeditor/themes/default/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kindeditor/plugins/image/image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1480490104140" expanded="true" signature="588:606" ph="..." />
-            <marker date="1480490104140" expanded="true" signature="680:705" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="2002:2015" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="2152:2165" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="2274:2285" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="2416:2428" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="2433:2439" ph="&amp;nbsp;" />
+            <marker date="1480506253989" expanded="true" signature="2781:2792" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="3204:3219" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="3369:3380" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4093:4104" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4238:4250" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4407:4420" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4475:4488" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4802:4813" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4938:4950" ph="..." />
+            <marker date="1480506253989" expanded="true" signature="4971:4977" ph="&amp;nbsp;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kindeditor/kindeditor-all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="283" column="69" selection-start-line="283" selection-start-column="69" selection-end-line="283" selection-end-column="69" />
+          <folding>
+            <marker date="1480510015793" expanded="true" signature="46783:46796" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="64468:64481" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="91314:91327" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="100476:100482" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="115037:115055" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="115169:115198" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="115309:115331" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="115531:115555" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="116306:116319" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="125788:125802" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="142141:142197" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="155092:155105" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="162238:162289" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="202978:202996" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="203029:203054" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="211547:211572" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="212243:212265" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="213477:213489" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="213586:213592" ph="©" />
+            <marker date="1480510015793" expanded="true" signature="234785:234798" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="235013:235025" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="238066:238084" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="238289:238301" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="238874:238926" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="240075:240139" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="240904:240956" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="242014:242032" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="242204:242216" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="242491:242516" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="246431:246454" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="246625:246650" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="248999:249017" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="249970:249995" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="257680:257698" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="265863:265876" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="265971:265982" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="266107:266119" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="266124:266130" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="266227:266233" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="266576:266587" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="266869:266880" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="274220:274233" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="274316:274329" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="274420:274431" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="274562:274574" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="274579:274585" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="274908:274919" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="275331:275346" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="275476:275487" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276180:276191" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276325:276337" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276426:276439" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276494:276507" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276802:276813" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276938:276950" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="276971:276977" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="287681:287694" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="287781:287792" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="287904:287916" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="287921:287927" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="288020:288026" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="288345:288356" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="288483:288495" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="293432:293456" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="294355:294368" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="294473:294484" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="294614:294626" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="294741:294752" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="297546:297559" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="297654:297665" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="297790:297802" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="297807:297813" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="297910:297916" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="298259:298270" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="298551:298562" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="313994:314007" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="354825:354850" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="355945:355963" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="355998:356017" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="356103:356128" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="357703:357721" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="357795:357820" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="360145:360161" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="362857:362870" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="362966:362977" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="363145:363151" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="363400:363411" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="363581:363587" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="363793:363799" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="363932:363938" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="364267:364278" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="364455:364461" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="364716:364727" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="365253:365264" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="365444:365450" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="365666:365677" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="373777:373783" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="376972:376985" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="377082:377093" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="377263:377269" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="377475:377481" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="377614:377620" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="377947:377958" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="378980:378991" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="379171:379177" ph="&amp;nbsp;" />
+            <marker date="1480510015793" expanded="true" signature="379393:379404" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="393576:393594" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="394279:394326" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="395780:395798" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="395833:395852" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="395952:395977" ph="..." />
+            <marker date="1480510015793" expanded="true" signature="396883:396931" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kindeditor/test/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="341" column="20" selection-start-line="341" selection-start-column="20" selection-end-line="341" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/zxbj_base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/my_edit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="532" column="17" selection-start-line="532" selection-start-column="17" selection-end-line="532" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/filename.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kailiEditor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="101" column="15" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="15" />
+        <state relative-caret-position="396">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1373,127 +2109,6 @@
             <element signature="n#style#0;n#span#0;n#div#13;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#13;n#textarea#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingeditor/kindeditor-all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="4509" column="47" selection-start-line="4509" selection-start-column="47" selection-end-line="4509" selection-end-column="47" />
-          <folding>
-            <marker date="1480490793983" expanded="true" signature="46783:46796" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="64468:64481" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="91314:91327" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="100476:100482" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="115037:115055" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="115169:115198" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="115309:115331" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="115531:115555" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="116306:116319" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="125788:125802" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="142141:142197" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="155092:155105" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="162238:162289" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="202978:202996" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="203029:203054" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="211547:211572" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="212243:212265" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="213477:213489" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="213586:213592" ph="©" />
-            <marker date="1480490793983" expanded="true" signature="234785:234798" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="235013:235025" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="238066:238084" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="238289:238301" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="238874:238926" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="240075:240139" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="240904:240956" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="242014:242032" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="242204:242216" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="242491:242516" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="246431:246454" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="246625:246650" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="248999:249017" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="249970:249995" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="257680:257698" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="265863:265876" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="265971:265982" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="266107:266119" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="266124:266130" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="266227:266233" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="266576:266587" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="266869:266880" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="274220:274233" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="274316:274329" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="274420:274431" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="274562:274574" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="274579:274585" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="274908:274919" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="275331:275346" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="275476:275487" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276180:276191" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276325:276337" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276426:276439" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276494:276507" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276802:276813" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276938:276950" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="276971:276977" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="287651:287664" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="287751:287762" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="287874:287886" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="287891:287897" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="287990:287996" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="288315:288326" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="288453:288465" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="293402:293426" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="294325:294338" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="294443:294454" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="294584:294596" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="294711:294722" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="297516:297529" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="297624:297635" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="297760:297772" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="297777:297783" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="297880:297886" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="298229:298240" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="298521:298532" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="313964:313977" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="354795:354820" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="355915:355933" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="355968:355987" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="356073:356098" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="357673:357691" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="357765:357790" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="360115:360131" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="362827:362840" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="362936:362947" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="363115:363121" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="363370:363381" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="363551:363557" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="363763:363769" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="363902:363908" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="364237:364248" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="364425:364431" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="364686:364697" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="365223:365234" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="365414:365420" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="365636:365647" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="373747:373753" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="376942:376955" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="377052:377063" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="377233:377239" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="377445:377451" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="377584:377590" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="377917:377928" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="378950:378961" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="379141:379147" ph="&amp;nbsp;" />
-            <marker date="1480490793983" expanded="true" signature="379363:379374" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="393546:393564" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="394249:394296" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="395750:395768" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="395803:395822" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="395922:395947" ph="..." />
-            <marker date="1480490793983" expanded="true" signature="396853:396901" ph="..." />
           </folding>
         </state>
       </provider>

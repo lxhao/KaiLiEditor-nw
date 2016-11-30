@@ -385,7 +385,7 @@ $(function () {
         //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
         $('#importReport').modal('hide');
         $('#settingsPage').modal('hide');
-        $('.changeModal').css('display', 'none');
+        $('#changecloseBtn').trigger('click');
     });
 });
 
@@ -986,6 +986,22 @@ $(document).ready(function () {
                 // };
             });
         }
+    });
+
+    //选择模板文件
+    $(".resume_change_template").click(function () {
+        var templateFilename = $(this).parents("li").children("p").text() + ".html";
+        templateFilename = '.' + fileSplit + 'template' + fileSplit + templateFilename;
+        console.log(templateFilename);
+        fs.readFile(templateFilename, function (err, data) {
+            if (err) {
+                layer.msg("读取文件失败! :" + err.message);
+                return;
+            }
+            //隐藏模板列表
+            $('#changecloseBtn').trigger('click');
+            KindEditor.html(data);
+        });
     });
 
 

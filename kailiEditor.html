@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="js/layer.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
-    <script type="text/javascript" src="js/editer.js"></script>
+    <script type="text/javascript" src="js/editor.js"></script>
     <script type="text/javascript" src="js/hotkeys.js"></script>
 </head>
 <body>
@@ -38,21 +38,18 @@
                 <img src="./images/null.png" width="152"/>
                 <p>这里好像空空的，还是换其他的吧。。。</p>
             </div>
-            <ul class="clearfix" id="data_template_list" data_type="common" data_page_num="1">
+            <ul class="clearfix" id="data_template_list" data_type="common">
                 <li class="data_template_list">
                     <div class="list-con clearfix">
                         <div class="img">
-                            <img src="images/logoSquare.png"
-                                 alt="JM0205"/>
+                            <img src="images/logoSquare.png"/>
                             <div class="hover-btn">
                                 <span class="huiyuan"></span>
                                 <a href="javascript:;" class="resume_change_template">选择</a>
                             </div>
                         </div>
-                        <div class="text">
-                            <a class="title">报告模板1</a>
-                        </div>
                     </div>
+                    <p class="title">filename</p>
                 </li>
             </ul>
         </div>
@@ -99,7 +96,6 @@
 
 <!--分割线-->
 <hr class="line" width="100%" size="1pt" color="#3a95be"/>
-<button style="text-align: center;">dfasdf</button>
 
 <!--导入xml文件提示框 -->
 <div class="modal fade imResumeModal" id="importReport">
@@ -229,22 +225,14 @@
     <ul>
         <li><a class="importFileBtn" href="javascript:;"><i class="wbdfont">&#xe76c;</i>导入诊单</a></li>
         <li><a class="changeModalBtn" href="javascript:;"><i class="wbdfont">&#xe75e;</i>更换模板</a></li>
-        <!--<li><a class="iResumeBtn" href="javascript:;"><i class="wbdfont">&#xe75d;</i>模块管理</a></li>-->
         <li><a class="pageSettingsBtn" href="javascript:;"><i class="wbdfont">&#xe75f;</i>页面设置</a></li>
     </ul>
 </div>
 
 <div class="wbdzx-container" id="content">
-    <button id="test" style="display: none" color="#000000"> test</button>
     <input id="saveHtmlFile" style="display: none" type="file" nwsaveas="filename.html"/>
-    <script>
-        $("#test").click(function () {
-            alert("a");
-        });
-        //        $("#test").click();
-    </script>
     <!--编辑区域 默认张A4纸的高度-->
-    <textarea id="editor_id" name="content" style="width:93%;height:1123px;">
+    <textarea id="editor_id" name="content" style="width:100%;height:1112px;">
         <style>
             body {
                 padding-left: 1.9cm;
@@ -482,8 +470,8 @@
             </p>
         </div>
 </textarea>
-    <script charset="utf-8" src="./kingeditor/kindeditor-all.js"></script>
-    <script charset="utf-8" src="./kingeditor/lang/zh-CN.js"></script>
+    <script charset="utf-8" src="./kindeditor/kindeditor-all.js"></script>
+    <script charset="utf-8" src="./kindeditor/lang/zh-CN.js"></script>
     <link rel="stylesheet" href="css/document.css"/>
     <script>
         //引入编辑器
@@ -491,12 +479,12 @@
             var options = {
                 filterMode: false,
                 items: [
-                    'source', 'undo', 'redo', 'template', 'cut', 'copy', 'paste',
+                    'source', 'undo', 'redo', 'cut', 'copy', 'paste',
                     'plainpaste', 'wordpaste', 'justifyleft', 'justifycenter', 'justifyright',
                     'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
                     'superscript', 'clearhtml', 'selectall', 'fullscreen', '/',
                     'formatblock', 'fontname', 'fontsize', 'forecolor', 'hilitecolor', 'bold',
-                    'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat',
+                    'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', 'image',
                     'table', 'hr', 'pagebreak', 'preview', 'print'
                 ],
                 minChangeSize: 30,

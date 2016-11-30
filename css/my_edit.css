@@ -531,7 +531,7 @@ a:link {
 
 .wbdzx-container {
     width: 1112px;
-    min-height: auto;
+    height: auto;
     border: 0px solid #2bd8ae;
     margin: 112px auto;
     padding: 5px;
@@ -1271,7 +1271,6 @@ a:link {
 }
 
 /*导入文件*/
-
 
 /*在线模板分类标签*/
 .zx-mb-box .slide .img a.icon, .zx-mblist-box ul li span.huiyuan, .zx-mblist-box ul li .img .hover-btn a, .zx-mb-disc .pdf, .zx-mblist-box ul li .bd .type, .zx-bar-box .zx-search button, .zx-mb-box .slide .img .hover-div a {

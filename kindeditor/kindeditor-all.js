@@ -7464,32 +7464,27 @@ KindEditor.plugin('image', function (K) {
                         if (dialog.isLoading) {
                             return;
                         }
+                        var url;
                         if (showLocal && showRemote && tabs && tabs.selectedIndex === 1 || !showRemote) {
                             if (uploadbutton.fileBox.val() == '') {
                                 alert(self.lang('pleaseSelectFile'));
                                 return;
                             }
-                            dialog.showLoading(self.lang('uploadLoading'));
-                            uploadbutton.submit();
                             localUrlBox.val('');
-                            return;
+                            //图片上传
+                            url = "file:" + uploadbutton.fileBox.val();
+                        } else {
+                            url = K.trim(urlBox.val());
+                            if (url == 'http://' || K.invalidUrl(url)) {
+                                alert(self.lang('invalidUrl'));
+                                urlBox[0].focus();
+                                return;
+                            }
                         }
-                        var url = K.trim(urlBox.val()),
-                            width = widthBox.val(),
+                        var width = widthBox.val(),
                             height = heightBox.val(),
                             title = titleBox.val(),
                             align = '';
-                        alignBox.each(function () {
-                            if (this.checked) {
-                                align = this.value;
-                                return false;
-                            }
-                        });
-                        if (url == 'http://' || K.invalidUrl(url)) {
-                            alert(self.lang('invalidUrl'));
-                            urlBox[0].focus();
-                            return;
-                        }
                         if (!/^\d*$/.test(width)) {
                             alert(self.lang('invalidWidth'));
                             widthBox[0].focus();
@@ -7500,6 +7495,12 @@ KindEditor.plugin('image', function (K) {
                             heightBox[0].focus();
                             return;
                         }
+                        alignBox.each(function () {
+                            if (this.checked) {
+                                align = this.value;
+                                return false;
+                            }
+                        });
                         clickFn.call(self, url, title, width, height, 0, align);
                     }
                 },
