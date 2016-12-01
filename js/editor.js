@@ -582,10 +582,9 @@ $(document).ready(function () {
         }
     }
 
+    //显示更换模板列表
     function resumeModal() {
-        //更换模板
         $(".changeModalBtn").click(function () {
-            //layer.msg("正在研发中  敬请期待");
             $(".changeModal").stop().fadeIn(300);
             var display = $('.changeModal').css('display');
             if (display == 'none') {
@@ -593,20 +592,10 @@ $(document).ready(function () {
             } else {
                 $("html").css('overflow', 'hidden');
             }
-            $(".gotopShow").removeAttr("style");
+            reload_template_list();
         });
 
-        //更换模板
-        $(".uResumeBtn").click(function () {
-            $(".changeModal").stop().fadeIn(300);
-            var display = $('.changeModal').css('display');
-            if (display == 'none') {
-                $("html").css('overflow', 'auto');
-            } else {
-                $("html").css('overflow', 'hidden');
-            }
-            $(".gotopShow").removeAttr("style");
-        });
+        //关闭模板列表页面
         $("#changecloseBtn").click(function () {
             $(".changeModal").stop().fadeOut(300);
             var display = $('.changeModal').css('display');
@@ -616,39 +605,14 @@ $(document).ready(function () {
                 $("html").css('overflow', 'auto');
             }
             $("#templateKeyword").val("");
-            select_template_page = 1;
-            reload_template_list();
-            //$(".gotopShow").show();
         });
 
     }
 
     resumeModal();
-    //模块添加隐藏
-    function resumeSlide() {
-        $(".iResumeBtn").click(function () {
-            $(".insertModal").animate({left: "0px"}, 300);
-            $(".resumebg1").css('background', 'transparent');
-            $(".resumebg1").stop().show();
-            $(".resumebg1").click(function () {
-                $(".insertModal").animate({left: "-300px"}, 300);
-                $(this).stop().hide();
-            });
-        });
-        $(".uResumeBtn").click(function () {
-            $(".rsuemeModal").animate({left: "0px"}, 300);
-            $(".resumebg1").css('background', 'transparent');
-            $(".resumebg1").stop().show();
-            $(".resumebg1").click(function () {
-                $(".rsuemeModal").animate({left: "-300px"}, 300);
-                $(this).stop().hide();
-            });
-        });
-    }
 
-    resumeSlide();
+    //列表鼠标经过效果
     function mbList() {
-        //列表鼠标经过效果
         $(".zx-mblist-box .list-con").each(function () {
             $(this).on('mouseenter', function (e) {
                 var e = e || window.event;
@@ -661,6 +625,7 @@ $(document).ready(function () {
                 mouseEvent(angle, this, 'off')
             })
         });
+
         function direct(e, o) {
             var w = o.offsetWidth;
             var h = o.offsetHeight;
@@ -738,85 +703,78 @@ $(document).ready(function () {
         }
     }
 
-    mbList();
-    //选择模板弹窗
-    var select_template_page = 1;
-    //搜索
-    $("#templateSeach").click(function () {
-        select_template_page = 1;
-        reload_template_list();
-    });
-    $("#templateKeyword").keyup(function () {
-        if (event.keyCode == 13) {
-            // 回车键事件
-            select_template_page = 1;
-            reload_template_list();
-        }
-    });
 
-    //排序
-    $(".templateSort a").click(function () {
-        if ($(this).hasClass("current")) {
-            return;
-        } else {
-            var $sortList = $(".templateSort a");
-            $sortList.removeClass("current");
-            $(this).toggleClass("current");
-            select_template_page = 1;
-            reload_template_list();
-        }
-    });
-
-    //模板点击事件
-    $(".changeModal .zx-tag a").click(function () {
-        $("#templateKeyword").val("");
-        select_template_page = 1;
-        reload_template_list();
-    });
-    function reload_template_list() {
-        $("#loadingBtn").addClass("loadingBtn");
-        var data_sort = $(".templateSort a.current").attr("data_sort");
-        var keyword = $("#templateKeyword").val();
-        var current_resume_type = $("#current_resume_type").val();
-        //console.log(page);
-        $("#without_tips").hide();
-        $("#loadingBtn").show();
-        if (select_template_page == 1) {
-            $("#data_template_list").load("/editresume/select_template/", {
-                "type": current_resume_type,
-                "pageNum": select_template_page,
-                "sort": data_sort,
-                "keyword": keyword
-            }, function () {
-                var $li = $("#data_template_list").find("li");
-                if ($li == null || $li.length == 0) {
-                    $("#without_tips").show();
-                    $("#loadingBtn").hide();
-                } else if ($li.length < 15) {
-                    $("#loadingBtn").hide();
-                }
-                $("#loadingBtn").removeClass("loadingBtn");
-                mbList();
-            });
-        } else {
-            $.get("/editresume/select_template/", {
-                "type": current_resume_type,
-                "pageNumber": select_template_page,
-                "sort": data_sort,
-                "keyword": keyword
-            }, function (result) {
-                if (result != null && result != "") {
-                    $("#data_template_list li:last").after(result);
-                    $("#loadingBtn").removeClass("loadingBtn");
-                    mbList();
-                } else {
-                    $("#loadingBtn").hide();
-                }
-            });
-        }
+    //字符串的占位替换
+    String.prototype.format = function () {
+        if (arguments.length == 0) return this;
+        for (var s = this, i = 0; i < arguments.length; i++)
+            s = s.replace(new RegExp("\\{" + i + "\\}", "g"), arguments[i]);
+        return s;
     };
 
-//恢复默认设置
+    /**
+     * 载入模板列表
+     */
+    function reload_template_list() {
+        //清空列表
+        $("#data_template_list").html('');
+        $("#without_tips").hide();
+        var appPath = process.cwd() + fileSplit;
+        fs.readdir(appPath + 'template', function (err, files) {
+            if (err) {
+                layer.msg('读取模板文件出错，请检查应用程序下“template"是否存在！');
+            }
+            if (files.length == 0) {
+                $("#without_tips").show();
+                return;
+            }
+            for (var i = 0; i < files.length; i++) {
+                if (files[i].substring(files[i].lastIndexOf('.') + 1, files[i].length) != 'html') {
+                    continue
+                }
+                var imgName = files[i].substring(0, files[i].lastIndexOf(".")) + ".png";
+                var htmlCode =
+                    '<div class="list-con clearfix">' +
+                    '<div class="img">' +
+                    '<img src="{0}"/>' +
+                    '<div class="hover-btn">' +
+                    '<span class="huiyuan"></span>' +
+                    '<a href="javascript:;" class="resume_change_template">选择</a>' +
+                    '</div>' +
+                    '</div>' +
+                    '<a class="title">{1}</a>' +
+                    '</div>';
+                htmlCode = htmlCode.format('./template/' + imgName, files[i].substring(0, files[i].lastIndexOf('.')));
+                var templateNode = document.createElement('li');
+                $(templateNode).addClass("data_template_list");
+                templateNode.innerHTML = htmlCode;
+                $("#data_template_list").get(0).appendChild(templateNode);
+            }
+            chooseTemplateListener();
+            mbList();
+        });
+        mbList();
+    };
+
+    //选择模板文件
+    function chooseTemplateListener() {
+        $(".resume_change_template").click(function () {
+            var templateFilename = $(this).parents(".list-con").children("a").text() + ".html";
+            templateFilename = '.' + fileSplit + 'template' + fileSplit + templateFilename;
+            console.log(templateFilename);
+            fs.readFile(templateFilename, function (err, data) {
+                if (err) {
+                    layer.msg("读取文件失败! :" + err.message);
+                    return;
+                }
+                //隐藏模板列表
+                $('#changecloseBtn').trigger('click');
+                KindEditor.html(data);
+            });
+        });
+    }
+
+    //恢复默认设置
     $("#defaultSettings").click(function () {
         $("#topSpace").get(0).value = defaultSettings.topSpace;
         $("#bottomSpace").get(0).value = defaultSettings.bottomSpace;
@@ -830,9 +788,25 @@ $(document).ready(function () {
 //保存设置
     $("#saveSettings").click(function () {
         var topSpace = $("#topSpace").get(0).value + "cm";
+        if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(topSpace)) {
+            layer.msg("上边距请输入数字或小数！")
+            return;
+        }
         var bottomSpace = $("#bottomSpace").get(0).value + "cm";
+        if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(bottomSpace)) {
+            layer.msg("下边距请输入数字或小数！")
+            return;
+        }
         var leftSpace = $("#leftSpace").get(0).value + "cm";
+        if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(leftSpace)) {
+            layer.msg("左边距请输入数字或小数！")
+            return;
+        }
         var rightSpace = $("#rightSpace").get(0).value + "cm";
+        if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(rightSpace)) {
+            layer.msg("右边距请输入数字或小数！")
+            return;
+        }
 
         //页边距
         var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
@@ -844,6 +818,10 @@ $(document).ready(function () {
 
         //分隔线厚度
         var lineSize = $("#lineSize").get(0).value + "pt";
+        if (!/^[1-9]\d*(pt)$/.test(lineSize)) {
+            layer.msg("线条大小请输入大于0的整数！")
+            return;
+        }
         var lineNodes = $(editerDocument.body).find(".line");
         lineNodes.each(function () {
             this.size = lineSize;
@@ -854,6 +832,10 @@ $(document).ready(function () {
         // var imgWidth = $("#imgWidth").get(0).value + "cm";
         var imgWidth = "auto";
         var imgGap = $("#imgGap").get(0).value + "cm";
+        if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(imgGap)) {
+            layer.msg("图片间距请输入数字或小数！")
+            return;
+        }
         imgNodes = $(editerDocument.body).find(".IMG1");
         imgNodes.each(function () {
             $(this).children(".value").css("width", imgWidth);
@@ -986,22 +968,6 @@ $(document).ready(function () {
                 // };
             });
         }
-    });
-
-    //选择模板文件
-    $(".resume_change_template").click(function () {
-        var templateFilename = $(this).parents("li").children("p").text() + ".html";
-        templateFilename = '.' + fileSplit + 'template' + fileSplit + templateFilename;
-        console.log(templateFilename);
-        fs.readFile(templateFilename, function (err, data) {
-            if (err) {
-                layer.msg("读取文件失败! :" + err.message);
-                return;
-            }
-            //隐藏模板列表
-            $('#changecloseBtn').trigger('click');
-            KindEditor.html(data);
-        });
     });
 
 

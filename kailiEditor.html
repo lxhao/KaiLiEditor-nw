@@ -21,7 +21,7 @@
     <script type="text/javascript" src="js/hotkeys.js"></script>
 </head>
 <body>
-<!--加载样式-->
+
 <!--替换模板-->
 <div class="changeModal">
     <span class="closeBtn" id="changecloseBtn"></span>
@@ -39,35 +39,8 @@
                 <p>这里好像空空的，还是换其他的吧。。。</p>
             </div>
             <ul class="clearfix" id="data_template_list" data_type="common">
-                <li class="data_template_list">
-                    <div class="list-con clearfix">
-                        <div class="img">
-                            <img src="images/logoSquare.png"/>
-                            <div class="hover-btn">
-                                <span class="huiyuan"></span>
-                                <a href="javascript:;" class="resume_change_template">选择</a>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="title">filename</p>
-                </li>
             </ul>
         </div>
-        <style>
-            .gotopShow {
-                display: block;
-                width: 40px;
-                height: 40px;
-                position: fixed;
-                bottom: 35px;
-                right: 10px;
-                cursor: pointer;
-                background: #989898 url(./images/gotop.png) no-repeat center 5px;
-                z-index: 10000;
-                transition: all 0.3s;
-            }
-        </style>
-        <a href="#top" class="gotop gotopShow"></a>
     </div>
 </div>
 
@@ -492,7 +465,10 @@
             KindEditor.options.filterMode = false;
             window.editor = K.create('#editor_id', options);
         });
-        //        $('#settingsPage').modal('show');
+        //测试
+        $(function () {
+            $('.changeModalBtn').trigger('click');
+        });
     </script>
 </div>
 <div style="height:200px;"></div>
