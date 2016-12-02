@@ -84,6 +84,8 @@ var OSX = process.platform;
 if (OSX == "linux" || OSX == "darwin") {
     fileSplit = "/";
 }
+var templateDir = process.cwd() + fileSplit + 'template' + fileSplit;
+
 var fs = require("fs");
 var defaultSettings = {
     "topSpace": 1.5,
@@ -385,6 +387,7 @@ $(function () {
         //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
         $('#importReport').modal('hide');
         $('#settingsPage').modal('hide');
+        $('#model_template_name').modal('hide');
         $('#changecloseBtn').trigger('click');
     });
 });
@@ -546,6 +549,7 @@ $(document).ready(function () {
             var img = $(toTag).children(".value");
             console.log(imgPath);
             img.attr("src", "file:" + imgPath);
+            img.attr("data-ke-src", "file:" + imgPath);
         } else {
             //替换成html的换行符
             textContent = textContent.replace(/#0d/g, "<br/>");
@@ -719,8 +723,7 @@ $(document).ready(function () {
         //清空列表
         $("#data_template_list").html('');
         $("#without_tips").hide();
-        var appPath = process.cwd() + fileSplit;
-        fs.readdir(appPath + 'template', function (err, files) {
+        fs.readdir(templateDir, function (err, files) {
             if (err) {
                 layer.msg('读取模板文件出错，请检查应用程序下“template"是否存在！');
             }
@@ -894,7 +897,6 @@ $(document).ready(function () {
             });
         },
 
-
         toPdf: function (filePath, html) {
         },
 
@@ -902,6 +904,38 @@ $(document).ready(function () {
         }
     });
 
+    //保存为模板文件
+    $(function () {
+        $("#save_template_btn").click(function () {
+            $('#model_template_name').modal("show");
+        });
+
+        $("#template_name_btn").click(function () {
+            var filename = $("#template_name").val();
+            //判断是否为合法输入
+            if (!filename) {
+                layer.msg("请输入合法文件名！");
+            }
+            var filePath = templateDir + filename + '.html';
+            console.log(filePath);
+            var html = editor.fullHtml();
+            htmlTransf.toHtml(filePath, html);
+            var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
+            html2canvas(editerDocument.body, {
+                onrendered: function (canvas) {
+                    var strDataURI = canvas.toDataURL("image/png");
+                    fs.writeFile(templateDir + filename + '.png', strDataURI, function (err) {
+                        if (err) {
+                            alert("保存模板失败!");
+                        }
+                        $('#model_template_name').modal("hide");
+                        layer.msg("模板已保存为" + filename);
+                    });
+                }
+            });
+        });
+    });
+    //保存为html文件
     $(".saveBtn").click(function () {
         //当前html文件是否是首次保存
         if (true) {

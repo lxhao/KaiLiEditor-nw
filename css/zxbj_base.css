@@ -2077,9 +2077,8 @@ header {
     font-style: italic;
 }
 
-.test {
-    color: #00a57c;
-    text-decoration: solid;
-    font-style: italic;
-    height: 200pt;
+.textInput {
+    min-width: 10em;
+    text-align: center;
 }
+

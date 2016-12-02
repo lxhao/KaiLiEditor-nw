@@ -19,6 +19,7 @@
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/editor.js"></script>
     <script type="text/javascript" src="js/hotkeys.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
 </head>
 <body>
 
@@ -105,6 +106,22 @@
     </div>
 </div>
 
+<!--用户输入模板名字-->
+<div class="modal fade imResumeModal" id="model_template_name">
+    <div class="modal-dialog">
+        <div class="modal-content clearfix ">
+            <div class="modal-text ">
+                <i class="wbdfont">&#xe75c;</i>
+                <p>请输入要保存模板的名称<br/></p>
+                <div class="form-div  div_upload">
+                    <input class="textInput" placeholder="模板名称" autofocus="autofocus" id="template_name"/>
+                </div>
+                <button class="fbtn" id="template_name_btn">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--设置页面-->
 <div class="modal fade imResumeModal" id="settingsPage">
     <style>
@@ -182,11 +199,17 @@
                         <a href="javascript:;" id="printBtn" target="_blank"><i class="wbdfont">
                             &#xe7bd;</i>打印</a>
                     </li>
+                    <!--<li class="save">-->
+                    <!--<a class="wbdfont " id="preview_btn" title="预览" href="javascript:;" target="_blank">-->
+                    <!--&#xe764;</a>-->
+                    <!--</li>-->
                     <li class="save">
                         <a class="wbdfont saveBtn" href="javascript:;" title="保存">&#xe767;</a>
                         &nbsp;
-                        <a class="wbdfont " id="preview_btn" title="预览" href="javascript:;" target="_blank">
-                            &#xe764;</a>
+                    </li>
+                    <li class="save">
+                        <a class="wbdfont " id="save_template_btn" title="保存为模板" href="javascript:;" target="_blank">
+                            &#xe76c;</a>
                     </li>
                 </ul>
             </div>
@@ -203,6 +226,16 @@
 </div>
 
 <div class="wbdzx-container" id="content">
+    <button id="test">test</button>
+    <script>
+        $("#test").click(function () {
+            var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
+            var imgNodes = $(editerDocument.body).find(".IMG2");
+            imgNodes.each(function () {
+                $(this).children(".value").attr('src', 'a');
+            });
+        });
+    </script>
     <input id="saveHtmlFile" style="display: none" type="file" nwsaveas="filename.html"/>
     <!--编辑区域 默认张A4纸的高度-->
     <textarea id="editor_id" name="content" style="width:100%;height:1112px;">
@@ -467,7 +500,7 @@
         });
         //测试
         $(function () {
-            $('.changeModalBtn').trigger('click');
+//            $('.changeModalBtn').trigger('click');
         });
     </script>
 </div>
