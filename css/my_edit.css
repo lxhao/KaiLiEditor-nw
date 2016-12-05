@@ -1368,22 +1368,25 @@ a:link {
     left: 0px;
 }
 
-.zx-mblist-box ul li span.huiyuan {
-    width: 185px;
-    height: 195px;
+.zx-mblist-box ul li .img .hover-btn .del_template {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    background-position: 0 -2246px;
-    z-index: 10;
+    margin-left: 35px;
+    color: #fff;
+    left: 79%;
+    top: 9%;
+    margin-top: -15px;
+    width: 35px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-position: 7px -697px;
 }
 
-.zx-mblist-box ul li .img .hover-btn a {
+.zx-mblist-box ul li .img .hover-btn .change_template {
     position: absolute;
     margin-left: 35px;
     color: #fff;
     left: 50%;
-    top: 50%;
+    top: 40%;
     margin-top: -15px;
     width: 70px;
     height: 30px;

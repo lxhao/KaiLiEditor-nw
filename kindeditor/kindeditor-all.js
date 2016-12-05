@@ -9208,11 +9208,11 @@ KindEditor.plugin('preview', function (K) {
     self.clickToolbar(name, function () {
         var lang = self.lang(name + '.'),
             html = '<div style="padding:10px 20px;">' +
-                '<iframe class="ke-textarea" frameborder="0" style="width:708px;height:400px;"></iframe>' +
+                '<iframe class="ke-textarea" frameborder="0" style="width:912px;height:800px;"></iframe>' +
                 '</div>',
             dialog = self.createDialog({
                 name: name,
-                width: 750,
+                width: 912,
                 title: self.lang(name),
                 body: html
             }),

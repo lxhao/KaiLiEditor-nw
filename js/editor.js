@@ -1,60 +1,3 @@
-/**
- * 在线编辑JS
- * JS使用说明：
- * 1.国际化：
- *        所有需要使用到国际化的元素名称都是用样式"resume_lang_xxxx"，xxxx为localLang的key值
- *        type为html表示为div内容；value表示为input值
- *        zh为中文；en为英文
- * 2.取值：
- *        基本属性（姓名、年龄等等）：
- *            class：resume_msg；for-key：属性名称；for-type：自定义；for-value：值的属性（默认：input，html：div内容，value：input）
- *        含有时间的混合属性值：
- *            class：resume_item；for-key（id）：属性名称；resume_value：属性值；resume_item_items：多项值（resume_time：时间；resume_unit：单位；resume_job：职位）
- *        图标项：
- *            class：resume_icon resume_icon_item；resume_value：单项；for-key：属性名称；for-value：属性值类型（默认：input，html：div内容，value：input）；
- *        图表项：
- *            class：resume_graph resume_graph_item；resume_value：单项；for-key：属性名称；for-value：属性值类型（默认：input，html：div内容，value：input）；
- *        自定义项：
- *            class：resume_custom；id：唯一标识；resume_name：自定义项名称；其他类同于"含有时间的混合属性值"；
- * 3.头像：
- *        头像外部div的ID：resume_head，img的class：resume_head
- * 4.线条工具：
- *        所有可编辑的线条加上class：resume_line
- * 5.图标工具:(for-id保存为key，遍历显示)
- *        所有可编辑的图标工具加上class：resume_icon_diy
- * 6.模块的显示隐藏
- *        取值：.resume_module span；for-id与模块的id值一致；
- * 7.模块排序：(分bar和foo排序)
- *        排序的模块加样式：resume_sort；同时含有唯一的标识。
- * 8.模块删除
- *        删除按钮样式：resume_delete；删除最近的一个区域：resume_delete_area
- *        内容删除按钮样式：resume_delete_；删除最近一个内容区域：resume_delete_area_
- *        自定义项删除样式：resume_custom_delete；删除最近一个自定义项区域：resume_custom_delete_area
- * 9.编辑区域
- *        所有可编辑的内容使用div+contenteditable实现
- *        所有可添加模块在尾部定义添加内容：get_resume_msg：自定义属性；get_resume_graph：自定义图表；get_resume_icon：自定义图标；
- *        get_resume_item多项值的单项；get_resume_item_area：自定义不含时间的自定义项；get_resume_items_area：自定义含时间的自定义项；
- *        编辑区域样式：
- *            baseBorder：可编辑边框
- * 10.加载参数
- *        setSquare：是否是正方形头像，是否是圆形头像
- *        setTheme：当前主题标识
- *        resumeStyle：当前主题支持的颜色（主题名称，颜色值），当前主题
- *        resumeModuleSort：排序
- * 11.导出加载
- *        var language：当前语言
- *        resumeModuleSort：排序
- * 12.提示内容
- *        提示的内容最外层div上面添加resume_notice，notice-key为提示什么内容
- * 13.拖拽内容
- *        拖拽内容为resume_drag
- * 14.简历首次保存：
- *        简历首次保存，服务器返回的是resumeId 和visitid的JSOn字符串
- *        并且使用H5的pustState功能改变了浏览器的URL
- *        并且会会把当前保存的简历在右边显示出来
- */
-
-
 // 国际化
 var localLang = {
     // 基本信息
@@ -383,7 +326,7 @@ $(function () {
     });
 
 
-    hotkeys('esc', function (event, handler) {
+    hotkeys('escape', function (event, handler) {
         //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
         $('#importReport').modal('hide');
         $('#settingsPage').modal('hide');
@@ -452,8 +395,13 @@ $(document).ready(function () {
     function readFileByPath(filePath) {
         var fileType = filePath.substring(filePath.lastIndexOf(".") + 1);
         var basePath = filePath.substring(0, filePath.lastIndexOf(fileSplit) + 1);
+        if (fileType.toLocaleLowerCase() == "html") {
+            readHtml(filePath);
+            return;
+        }
+
         if (fileType.toLocaleLowerCase() != "xml") {
-            layer.msg("只支持xml文件格式！");
+            layer.msg("只支持xml或者html文件格式！");
             return;
         }
 
@@ -466,6 +414,20 @@ $(document).ready(function () {
             $('#importReport').modal('hide');
             updateContent(basePath, data);
         });
+    }
+
+    //读取html文件
+    function readHtml(filePath) {
+        fs.readFile(filePath, function (err, data) {
+            if (err) {
+                layer.msg("读取文件失败! :" + err.message);
+                return;
+            }
+            //隐藏导入文件提示框
+            $('#importReport').modal('hide');
+            KindEditor.html('#editor_id', data.toString());
+        });
+
     }
 
     //读取xml文件内容，并对页面内容进行更新
@@ -622,11 +584,14 @@ $(document).ready(function () {
                 var e = e || window.event;
                 var angle = direct(e, this)
                 mouseEvent(angle, this, 'in')
+                //显示删除叉
+                $(this).find(".closeImg").css('display', 'inline-block');
             })
             $(this).on('mouseleave', function (e) {
                 var e = e || window.event;
                 var angle = direct(e, this)
                 mouseEvent(angle, this, 'off')
+                $(this).find(".closeImg").css('display', 'none');
             })
         });
 
@@ -741,8 +706,8 @@ $(document).ready(function () {
                     '<div class="img">' +
                     '<img src="{0}"/>' +
                     '<div class="hover-btn">' +
-                    '<span class="huiyuan"></span>' +
-                    '<a href="javascript:;" class="resume_change_template">选择</a>' +
+                    '<a href="javascript:;" class="change_template">选择</a>' +
+                    '<img src="../images/close_pop.png" class="del_template" alt="删除" />' +
                     '</div>' +
                     '</div>' +
                     '<a class="title">{1}</a>' +
@@ -754,25 +719,50 @@ $(document).ready(function () {
                 $("#data_template_list").get(0).appendChild(templateNode);
             }
             chooseTemplateListener();
+            delTemplateListener();
             mbList();
         });
-        mbList();
     };
+
+    //删除模板文件
+    function delTemplateListener() {
+        $(".del_template").click(function () {
+            var templateBaseName = templateDir + $(this).parents(".list-con").children("a").text();
+            var templateFilename = templateBaseName + ".html";
+            var templateImgName = templateBaseName + ".png";
+            //删除模板文件
+            fs.unlinkSync(templateFilename);
+            fs.unlinkSync(templateImgName);
+            //重新载入模板列表
+            reload_template_list();
+            console.log(templateFilename);
+            console.log(templateImgName);
+        });
+
+        $(".del_template").hover(function () {
+                $(this).css("background-color", "#f35959");
+            },
+            function () {
+                $(this).css("background-color", "transparent");
+            });
+
+    }
 
     //选择模板文件
     function chooseTemplateListener() {
-        $(".resume_change_template").click(function () {
-            var templateFilename = $(this).parents(".list-con").children("a").text() + ".html";
-            templateFilename = '.' + fileSplit + 'template' + fileSplit + templateFilename;
+        $(".change_template").click(function () {
+            var templateBaseName = templateDir + $(this).parents(".list-con").children("a").text();
+            var templateFilename = templateBaseName + ".html";
             console.log(templateFilename);
             fs.readFile(templateFilename, function (err, data) {
                 if (err) {
-                    layer.msg("读取文件失败! :" + err.message);
+                    layer.msg("加载模板出错! :" + err.message);
                     return;
                 }
+                KindEditor.html('#editor_id', "");
+                KindEditor.html('#editor_id', data.toString());
                 //隐藏模板列表
                 $('#changecloseBtn').trigger('click');
-                KindEditor.html(data);
             });
         });
     }
@@ -923,8 +913,8 @@ $(document).ready(function () {
             var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
             html2canvas(editerDocument.body, {
                 onrendered: function (canvas) {
-                    var strDataURI = canvas.toDataURL("image/png");
-                    fs.writeFile(templateDir + filename + '.png', strDataURI, function (err) {
+                    var base64Data = canvas.toDataURL("image/png").replace(/^data:image\/png;base64,/, "")
+                    fs.writeFile(templateDir + filename + '.png', base64Data, 'base64', function (err) {
                         if (err) {
                             alert("保存模板失败!");
                         }
@@ -935,6 +925,7 @@ $(document).ready(function () {
             });
         });
     });
+
     //保存为html文件
     $(".saveBtn").click(function () {
         //当前html文件是否是首次保存
