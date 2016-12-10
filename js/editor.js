@@ -104,7 +104,7 @@ $(function () {
     // 返回顶部
     $(window).scroll(function () {
         var scrollt = document.body.scrollTop - document.documentElement.scrollTop;
-        if (scrollt > 200)
+        if (scrollt > 300)
             $(".gotop").show();
         else
             $(".gotop").hide();
@@ -285,54 +285,6 @@ $(function () {
         }
     });
 
-    /**
-     * 自定义确认框
-     */
-    function resumeConfirm(content, success, cancel) {
-        if (!content)
-            content = "删除后该内容将不可恢复，确认删除吗？";
-        $("#confirmContent").text(content);
-        $('#delModal').modal("show");
-        $("#confirmSuccess").click(function () {
-            if (success) {
-                success();
-                cancel = null;
-                success = null;
-                $('#delModal').modal("hide");
-                $("#confirmSuccess").unbind("click"); // 解除事件
-            }
-        });
-        $("#confirmCancel").click(function () {
-            if (cancel) {
-                cancel();
-                cancel = null;
-                success = null;
-                $('#delModal').modal("hide");
-                $("#confirmCancel").unbind("click");
-            }
-        });
-    }
-
-    //设置刷新页面的快捷键
-    hotkeys('ctrl+r', function (event, handler) {
-        resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
-            location.reload();
-        }, function () {
-        });
-    });
-
-    hotkeys('ctrl+shift+r', function (event, handler) {
-        location.reload();
-    });
-
-
-    hotkeys('escape', function (event, handler) {
-        //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
-        $('#importReport').modal('hide');
-        $('#settingsPage').modal('hide');
-        $('#model_template_name').modal('hide');
-        $('#changecloseBtn').trigger('click');
-    });
 });
 
 $(document).ready(function () {
@@ -393,6 +345,7 @@ $(document).ready(function () {
     });
 
     function readFileByPath(filePath) {
+        document.title = filePath;
         var fileType = filePath.substring(filePath.lastIndexOf(".") + 1);
         var basePath = filePath.substring(0, filePath.lastIndexOf(fileSplit) + 1);
         if (fileType.toLocaleLowerCase() == "html") {
@@ -928,17 +881,24 @@ $(document).ready(function () {
 
     //保存为html文件
     $(".saveBtn").click(function () {
-        //当前html文件是否是首次保存
-        if (true) {
-            $("#saveHtmlFile").click();
-            KindEditor.sync('#editor_id');
-            var chooser = document.querySelector('#saveHtmlFile');
-            chooser.addEventListener("change", function (evt) {
-                var filePath = this.value.toString();
+        $("#saveHtmlFile").click();
+        KindEditor.sync('#editor_id');
+        var chooser = document.querySelector('#saveHtmlFile');
+        chooser.addEventListener("change", function (evt) {
+            var filePath = this.value.toString();
+            if (!$(".filePath").get(0)) {
+                //用来保存文件路径,再次点击保存按钮式可以直接保存
+                var filePathNode = document.createElement('p');
+                $(filePathNode).addClass("filePath");
+                filePathNode.innerHTML = filePath;
+                document.body.appendChild(filePathNode);
                 var html = editor.fullHtml();
-                htmlTransf.toHtml(filePath, html);
-            });
-        }
+            }
+            $(".filePath").html(filePath);
+            htmlTransf.toHtml(filePath, html);
+            document.title = filePath;
+            layer.msg("文件已保存为" + filePath);
+        });
     });
 
     //预览
@@ -993,7 +953,37 @@ $(document).ready(function () {
                 // };
             });
         }
+
     });
+
+    /**
+     * 自定义确认框
+     */
+    function resumeConfirm(content, success, cancel) {
+        if (!content)
+            content = "删除后该内容将不可恢复，确认删除吗？";
+        $("#confirmContent").text(content);
+        $('#delModal').modal("show");
+        $("#confirmSuccess").click(function () {
+            if (success) {
+                success();
+                cancel = null;
+                success = null;
+                $('#delModal').modal("hide");
+                $("#confirmSuccess").unbind("click"); // 解除事件
+            }
+        });
+
+        $("#confirmCancel").click(function () {
+            if (cancel) {
+                cancel();
+                cancel = null;
+                success = null;
+                $('#delModal').modal("hide");
+                $("#confirmCancel").unbind("click");
+            }
+        });
+    }
 
 
 // KindEditor.ready(function () {
@@ -1005,5 +995,4 @@ $(document).ready(function () {
 //     editorBody.css("padding-top", defaultSettings.topSpace + "cm");
 //     editorBody.css("padding-bottom", defaultSettings.bottomSpace + "cm");
 // });
-})
-;
+});

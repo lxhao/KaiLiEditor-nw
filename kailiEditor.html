@@ -14,12 +14,15 @@
     <link rel="stylesheet" href="css/zxbj_base.css"/>
     <link rel="stylesheet" href="css/layer.css"/>
     <link rel="stylesheet" href="css/my_edit.css"/>
+    <link rel="stylesheet" href="css/document.css"/>
     <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="js/layer.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script charset="utf-8" src="./kindeditor/kindeditor-all.js"></script>
+    <script charset="utf-8" src="./kindeditor/lang/zh-CN.js"></script>
     <script type="text/javascript" src="js/editor.js"></script>
     <script type="text/javascript" src="js/hotkeys.js"></script>
-    <script type="text/javascript" src="js/html2canvas.js"></script>
 </head>
 <body>
 
@@ -175,7 +178,7 @@
 <!--返回顶部-->
 <a href="#top" class="gotop gotopShow"></a>
 
-<div class="wbdzx-header">
+<div class="header">
     <div class="inner">
         <div class="left">
             <a class="logo"><img src="images/logo2.png"/></a>
@@ -199,17 +202,11 @@
                         <a href="javascript:;" id="printBtn" target="_blank"><i class="wbdfont">
                             &#xe7bd;</i>打印</a>
                     </li>
-                    <!--<li class="save">-->
-                    <!--<a class="wbdfont " id="preview_btn" title="预览" href="javascript:;" target="_blank">-->
-                    <!--&#xe764;</a>-->
-                    <!--</li>-->
                     <li class="save">
                         <a class="wbdfont saveBtn" href="javascript:;" title="保存">&#xe767;</a>
-                        &nbsp;
                     </li>
                     <li class="save">
-                        <a class="wbdfont " id="save_template_btn" title="保存为模板" href="javascript:;" target="_blank">
-                            &#xe76c;</a>
+                        <a class="wbdfont " id="save_template_btn" title="保存为模板" href="javascript:;"> &#xe76c;</a>
                     </li>
                 </ul>
             </div>
@@ -225,8 +222,8 @@
     </ul>
 </div>
 
-<div class="wbdzx-container" id="content">
-    <button id="test">test</button>
+<div class="editorPage-container" id="content">
+    <button id="test" style="display: none;">test</button>
     <script>
         $("#test").click(function () {
             var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
@@ -476,11 +473,67 @@
             </p>
         </div>
 </textarea>
-    <script charset="utf-8" src="./kindeditor/kindeditor-all.js"></script>
-    <script charset="utf-8" src="./kindeditor/lang/zh-CN.js"></script>
-    <link rel="stylesheet" href="css/document.css"/>
+    <!--注意-->
+    <!--编辑器初始化代码如果放到js文件中，会显著拖慢编辑器初始化速度-->
     <script>
-        //引入编辑器
+        /**
+         * 设置快捷键
+         * hotkeys 设置的快捷键不对编辑器生效，故同时调用了编辑器ctrl方法
+         */
+        function setHotkeys(scope) {
+            KindEditor.ctrl(scope, 'R', function () {
+                resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
+                    nw.Window.get().reload();
+                }, function () {
+                });
+            });
+
+            hotkeys('ctrl+r', function (event, handler) {
+                resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
+                    nw.Window.get().reload();
+                }, function () {
+                });
+            });
+
+            //调试用
+            hotkeys('ctrl+shift+r', function (event, handler) {
+                nw.Window.get().reload();
+            });
+
+            function saveHtml() {
+                //当前html文件是否是首次保存
+                var filePath = $(".filePath").text();
+                if (filePath) {
+                    var html = editor.fullHtml();
+                    fs.writeFile(filePath, html, function (err) {
+                        if (err) {
+                            alert("保存失败!");
+                        }
+                    });
+                    layer.msg("文件已保存为" + filePath);
+                    document.title = filePath;
+                    return;
+                }
+                $(".saveBtn").trigger("click");
+            }
+
+            KindEditor.ctrl(scope, 'S', function () {
+                saveHtml();
+            });
+
+            hotkeys('ctrl+s', function (event, handler) {
+                saveHtml();
+            });
+
+            hotkeys('escape', function (event, handler) {
+                //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
+                $('#importReport').modal('hide');
+                $('#settingsPage').modal('hide');
+                $('#model_template_name').modal('hide');
+                $('#changecloseBtn').trigger('click');
+            });
+        }
+
         KindEditor.ready(function (K) {
             var options = {
                 filterMode: false,
@@ -497,10 +550,8 @@
             };
             KindEditor.options.filterMode = false;
             window.editor = K.create('#editor_id', options);
-        });
-        //测试
-        $(function () {
-//            $('.changeModalBtn').trigger('click');
+            var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
+            setHotkeys(editerDocument);
         });
     </script>
 </div>

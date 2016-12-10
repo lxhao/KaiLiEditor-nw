@@ -345,7 +345,7 @@ a:link {
 
 /*tooltips ...end*/
 
-.wbdzx-header {
+.header {
     width: 100%;
     height: 65px;
     background: #fff;
@@ -355,37 +355,37 @@ a:link {
     z-index: 9994;
 }
 
-.wbdzx-header .inner {
+.header .inner {
     padding: 0 0 0 25px;
 }
 
-.wbdzx-header .logo {
+.header .logo {
     display: inline-block;
     line-height: 40px;
     border-right: 1px solid #ededed;
     padding-right: 30px;
 }
 
-.wbdzx-header .logo img {
+.header .logo img {
     display: inline-block;
     width: 100%;
     max-width: 100%;
     margin-top: 15px;
 }
 
-.wbdzx-header .return {
+.header .return {
     color: #707070;
     padding-left: 20px;
 }
 
-.wbdzx-header .return i {
+.header .return i {
     padding-right: 3px;
 }
 
-.wbdzx-header .toolbar {
+.header .toolbar {
 }
 
-.wbdzx-header .toolbar ul li {
+.header .toolbar ul li {
     height: 65px;
     line-height: 65px;
     border-left: 1px solid #ededed;
@@ -395,33 +395,33 @@ a:link {
     text-align: center;
 }
 
-.wbdzx-header .toolbar ul li .wbdfont {
+.header .toolbar ul li .wbdfont {
     font-size: 22px;
     color: #4cd3b2;
     padding: 0 2px;
     display: inline-block;
 }
 
-.wbdzx-header .toolbar ul li a:hover {
+.header .toolbar ul li a:hover {
     color: #1de2b2;
     border-color: #1de2b2;
 }
 
-.wbdzx-header .toolbar ul li a:checked, .wbdzx-header .toolbar ul li a:focus, .wbdzx-header .toolbar ul li a:active {
+.header .toolbar ul li a:checked, .header .toolbar ul li a:focus, .header .toolbar ul li a:active {
     color: #06ab82;
     border-color: #06ab82;
 }
 
-.wbdzx-header .toolbar ul li a.disabled {
+.header .toolbar ul li a.disabled {
     color: #e1e1e1;
     cursor: not-allowed;
 }
 
-.wbdzx-header .toolbar .save {
+.header .toolbar .save {
     line-height: 74px
 }
 
-.wbdzx-header .toolbar .save a {
+.header .toolbar .save a {
     width: 40px;
     height: 40px;
     border: 1px solid #2bd8ae;
@@ -431,54 +431,54 @@ a:link {
     line-height: 40px;
 }
 
-.wbdzx-header .toolbar .save a:hover {
+.header .toolbar .save a:hover {
     background: #00c091;
     color: #fff;
     border-color: #04a77f
 }
 
-.wbdzx-header .toolbar .save a:last-child {
+.header .toolbar .save a:last-child {
     margin: 0px;
 }
 
-.wbdzx-header .toolbar .preview {
+.header .toolbar .preview {
     background: #00c091;
     cursor: pointer;
 }
 
-.wbdzx-header .toolbar .preview a, .wbdzx-header .toolbar .preview i.wbdfont {
+.header .toolbar .preview a, .header .toolbar .preview i.wbdfont {
     color: #fff;
 }
 
-.wbdzx-header .toolbar .preview a:hover {
+.header .toolbar .preview a:hover {
     color: #fff;
 }
 
-.wbdzx-header .toolbar .preview:hover {
+.header .toolbar .preview:hover {
     background: #07d2a0;
     transition: all .3s;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
 }
 
-.wbdzx-header .toolbar .preview:active, .wbdzx-header .toolbar .preview:focus, .wbdzx-header .toolbar .preview:checked {
+.header .toolbar .preview:active, .header .toolbar .preview:focus, .header .toolbar .preview:checked {
     background: #06ab82;
 }
 
-.wbdzx-header .inner .left {
+.header .inner .left {
     width: 40%;
 }
 
-.wbdzx-header .inner .center {
+.header .inner .center {
     width: 20%;
     float: left;
 }
 
-.wbdzx-header .inner .right {
+.header .inner .right {
     width: 40%;
 }
 
-.wbdzx-header .changeInput input {
+.header .changeInput input {
     border-color: transparent;
     font-size: 16px;
     color: #ccc;
@@ -488,7 +488,7 @@ a:link {
     margin: 19px auto;
 }
 
-.wbdzx-header .changeInput input:focus {
+.header .changeInput input:focus {
     border-bottom: 1px solid #00c091;
     color: #454545;
 }
@@ -529,7 +529,7 @@ a:link {
     padding-bottom: 5px;
 }
 
-.wbdzx-container {
+.editorPage-container {
     width: 1112px;
     height: auto;
     border: 0px solid #2bd8ae;

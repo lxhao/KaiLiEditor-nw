@@ -9331,7 +9331,7 @@ table td {
     cursor: pointer;
 }
 
-.wbdzx-container-m.wbdzx-container {
+.wbdzx-container-m.editorPage-container {
     width: 100%;
     height: 100%;
     border: none;
@@ -9343,13 +9343,13 @@ table td {
     overflow-x: hidden;
 }
 
-.wbdzx-container-m.wbdzx-container .wbdzx-inner {
+.wbdzx-container-m.editorPage-container .wbdzx-inner {
     height: 639px;
     overflow-x: hidden;
     padding-left: 2px;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar {
+.wbdzx-container-m.editorPage-container .mb-toolbar {
     padding: 20px 12px 10px 12px;
     height: auto;
     line-height: initial;
@@ -9361,27 +9361,27 @@ table td {
     line-height: initial;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar .num, .wbdzx-container-m.wbdzx-container .mb-toolbar .pdf {
+.wbdzx-container-m.editorPage-container .mb-toolbar .num, .wbdzx-container-m.editorPage-container .mb-toolbar .pdf {
     display: none;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar .right {
+.wbdzx-container-m.editorPage-container .mb-toolbar .right {
     float: left;
     width: 100%;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar .themeBox {
+.wbdzx-container-m.editorPage-container .mb-toolbar .themeBox {
     float: right;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar .info span {
+.wbdzx-container-m.editorPage-container .mb-toolbar .info span {
     float: left;
     padding: 0px;
     color: #b3b3b3;
     line-height: 30px;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar span.moblie {
+.wbdzx-container-m.editorPage-container .mb-toolbar span.moblie {
     display: block !important;
     float: right !important;
     background: url(../images/zxbj/wbdzx_toolbar.png) 77px -850px;
@@ -9389,56 +9389,56 @@ table td {
     padding-right: 22px;
 }
 
-.wbdzx-container-m.wbdzx-container .mb-toolbar .info {
+.wbdzx-container-m.editorPage-container .mb-toolbar .info {
     border-bottom: 1px solid #e4e4e4;
     width: 100%;
     padding-bottom: 15px;
 }
 
-.wbdzx-container-m.wbdzx-container .wbd-baseStyle {
+.wbdzx-container-m.editorPage-container .wbd-baseStyle {
     width: 336px;
     height: auto !important;
     margin: 0px auto; /* border: 2px solid #f3f3f3; */
     border-radius: 2px;
 }
 
-.wbdzx-container-m.wbdzx-container .resumePageBreak_v4 {
+.wbdzx-container-m.editorPage-container .resumePageBreak_v4 {
     display: none !important;
 }
 
-.wbdzx-container-m.wbdzx-container .wbd-fontBar .inner {
+.wbdzx-container-m.editorPage-container .wbd-fontBar .inner {
     top: 70px;
     left: 50%;
     margin-left: -400px;
     position: fixed;
 }
 
-.wbdzx-container-m.wbdzx-container .skillDiv .wbd-fontBar .inner {
+.wbdzx-container-m.editorPage-container .skillDiv .wbd-fontBar .inner {
     position: absolute !important;
     top: -50px !important;
     left: 0px !important;
     margin-left: 0px !important;
 }
 
-.wbdzx-container-m.wbdzx-container .hobbyDiv .wbd-fontBar .inner {
+.wbdzx-container-m.editorPage-container .hobbyDiv .wbd-fontBar .inner {
     position: absolute !important;
     top: -50px !important;
     left: 0px !important;
     margin-left: 0px !important;
 }
 
-.wbdzx-container-m.wbdzx-container .msgDiv .wbd-fontBar .inner {
+.wbdzx-container-m.editorPage-container .msgDiv .wbd-fontBar .inner {
     position: absolute !important;
     top: -50px !important;
     left: 0px !important;
     margin-left: 0px !important;
 }
 
-.wbdzx-container-m.wbdzx-container .wbd-m-baseStyle .baseContent {
+.wbdzx-container-m.editorPage-container .wbd-m-baseStyle .baseContent {
     padding: 3px;
 }
 
-.wbdzx-container-m.wbdzx-container .wbd-m-baseStyle .baseContent .conText {
+.wbdzx-container-m.editorPage-container .wbd-m-baseStyle .baseContent .conText {
     padding: 0px;
     margin: 0px;
 }
@@ -9458,7 +9458,7 @@ table td {
     margin: 10px;
 }
 
-.wbdzx-container-m.wbdzx-container .wbd-mb-bg {
+.wbdzx-container-m.editorPage-container .wbd-mb-bg {
     display: none;
     width: 359px;
     height: 100px;
@@ -9468,28 +9468,28 @@ table td {
 
 @media only screen and (min-width: 1868px) and (max-width: 1920px) {
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 460px;
     }
 }
 
 @media only screen and (min-width: 1661px) and (max-width: 1867px) {
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 333px;
     }
 }
 
 @media only screen and (min-width: 1555px) and (max-width: 1660px) {
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 233px;
     }
 }
 
 @media only screen and (min-width: 1442px) and (max-width: 1554px) {
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 240px;
     }
 }
@@ -9515,96 +9515,96 @@ table td {
 }
 
 @media only screen and (min-width: 1367px) and (max-width: 1441px) {
-    .wbdzx-container-m.wbdzx-container .wbd-baseStyle {
+    .wbdzx-container-m.editorPage-container .wbd-baseStyle {
         width: 285px;
     }
 
-    .wbdzx-container-m.wbdzx-container .wbdzx-inner {
+    .wbdzx-container-m.editorPage-container .wbdzx-inner {
         height: 532px;
         padding-left: 3px
     }
 
-    .wbdzx-container-m.wbdzx-container {
+    .wbdzx-container-m.editorPage-container {
         background-position: center 115px;
     }
 
-    .wbdzx-container-m.wbdzx-container, .wbdzx-container-m.wbdzx-container .wbd-mb-bg {
+    .wbdzx-container-m.editorPage-container, .wbdzx-container-m.editorPage-container .wbd-mb-bg {
         background-size: 296px;
     }
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 245px;
         top: 117px;
     }
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1366px) {
-    .wbdzx-container-m.wbdzx-container .wbdzx-inner {
+    .wbdzx-container-m.editorPage-container .wbdzx-inner {
         height: 431px;
         padding-left: 4px;
     }
 
-    .wbdzx-container-m.wbdzx-container .wbd-baseStyle {
+    .wbdzx-container-m.editorPage-container .wbd-baseStyle {
         width: 240px;
     }
 
-    .wbdzx-container-m.wbdzx-container {
+    .wbdzx-container-m.editorPage-container {
         background-position: center 89px;
     }
 
-    .wbdzx-container-m.wbdzx-container {
+    .wbdzx-container-m.editorPage-container {
         background-size: 249px;
         padding: 135px 0
     }
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 224px;
         top: 91px;
     }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    .wbdzx-container-m.wbdzx-container .wbdzx-inner {
+    .wbdzx-container-m.editorPage-container .wbdzx-inner {
         height: 550px;
     }
 
-    .wbdzx-container-m.wbdzx-container .wbd-baseStyle {
+    .wbdzx-container-m.editorPage-container .wbd-baseStyle {
         width: 289px;
     }
 
-    .wbdzx-container-m.wbdzx-container {
+    .wbdzx-container-m.editorPage-container {
         background-position: center 115px;
     }
 
-    .wbdzx-container-m.wbdzx-container, .wbdzx-container-m.wbdzx-container .wbd-mb-bg {
+    .wbdzx-container-m.editorPage-container, .wbdzx-container-m.editorPage-container .wbd-mb-bg {
         background-size: 305px
     }
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 206px;
         top: 117px;
     }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1023px) {
-    .wbdzx-container-m.wbdzx-container .wbd-baseStyle {
+    .wbdzx-container-m.editorPage-container .wbd-baseStyle {
         width: 285px;
     }
 
-    .wbdzx-container-m.wbdzx-container .wbdzx-inner {
+    .wbdzx-container-m.editorPage-container .wbdzx-inner {
         height: 532px;
         padding-left: 3px
     }
 
-    .wbdzx-container-m.wbdzx-container {
+    .wbdzx-container-m.editorPage-container {
         background-position: center 115px;
     }
 
-    .wbdzx-container-m.wbdzx-container, .wbdzx-container-m.wbdzx-container .wbd-mb-bg {
+    .wbdzx-container-m.editorPage-container, .wbdzx-container-m.editorPage-container .wbd-mb-bg {
         background-size: 296px;
     }
 
-    .wbdzx-container-m.wbdzx-container .mb-toolbar {
+    .wbdzx-container-m.editorPage-container .mb-toolbar {
         right: 206px;
         top: 117px;
     }

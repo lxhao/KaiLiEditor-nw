@@ -212,9 +212,10 @@
 
 //表单控件控件判断 返回 Boolean
     function filter(event) {
-        var tagName = (event.target || event.srcElement).tagName;
-        //忽略这些标签情况下快捷键无效
-        return !(tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA');
+        // var tagName = (event.target || event.srcElement).tagName;
+        // //忽略这些标签情况下快捷键无效
+        // return !(tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA');
+        return true;
     }
 
 //修饰键转换成对应的键码
@@ -237,9 +238,20 @@
     addEvent(document, 'keydown', function (event) {
         dispatch(event);
     });
+
     addEvent(document, 'keyup', function (event) {
         clearModifier(event);
     });
+    //编辑器设置快捷键
+
+    // var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
+    // addEvent(editerDocument, 'keydown', function (event) {
+    //     dispatch(event);
+    // });
+    //
+    // addEvent(editerDocument, 'keyup', function (event) {
+    //     clearModifier(event);
+    // });
 //清除修饰键
     function clearModifier(event) {
         var key = event.keyCode,
