@@ -1,7 +1,11 @@
 var gui = require('nw.gui');
 
-var OSX = process.platform === "darwin";
 var mainWindow = nw.Window.get();
+//隐藏index页面
+mainWindow.hide();
+// var OSX = process.platform === "darwin";
+// var userHomeFolder = OSX ? process.env.HOME : process.env.USERPROFILE;
+
 
 //任务栏
 var tray = new nw.Tray({icon: 'icon.png'});

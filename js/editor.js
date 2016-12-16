@@ -22,14 +22,27 @@ var localLang = {
     "declaration": {"type": "value", "zh": "声明：", "en": "Declaration :"},
 };
 
+var fs = require("fs");
 var fileSplit = "\\";
+var userHomeFolder = process.env.USERPROFILE;
 var OSX = process.platform;
 if (OSX == "linux" || OSX == "darwin") {
     fileSplit = "/";
+    userHomeFolder = process.env.HOME;
 }
+
+//模板文件保存到用户家目录
+// var templateDir = userHomeFolder + fileSplit + '.sonoScapeEditor' + fileSplit + 'template' + fileSplit;
+//模板文件保存到安转目录
 var templateDir = process.cwd() + fileSplit + 'template' + fileSplit;
 
-var fs = require("fs");
+//文件夹不存在，创建
+var exists = fs.existsSync(templateDir);
+if (!exists) {
+    fs.mkdirSync(userHomeFolder + fileSplit + '.sonoScapeEditor');
+    fs.mkdirSync(templateDir);
+}
+
 var defaultSettings = {
     "topSpace": 1.5,
     "bottomSpace": 1.5,
@@ -666,7 +679,7 @@ $(document).ready(function () {
                     '</div>' +
                     '<a class="title">{1}</a>' +
                     '</div>';
-                htmlCode = htmlCode.format('./template/' + imgName, files[i].substring(0, files[i].lastIndexOf('.')));
+                htmlCode = htmlCode.format('file://' + templateDir + imgName, files[i].substring(0, files[i].lastIndexOf('.')));
                 var templateNode = document.createElement('li');
                 $(templateNode).addClass("data_template_list");
                 templateNode.innerHTML = htmlCode;
@@ -887,14 +900,17 @@ $(document).ready(function () {
         var chooser = document.querySelector('#saveHtmlFile');
         chooser.addEventListener("change", function (evt) {
             var filePath = this.value.toString();
+            if (!filePath) {
+                return;
+            }
             if (!$(".filePath").get(0)) {
                 //用来保存文件路径,再次点击保存按钮式可以直接保存
                 var filePathNode = document.createElement('p');
                 $(filePathNode).addClass("filePath");
                 filePathNode.innerHTML = filePath;
                 document.body.appendChild(filePathNode);
-                var html = editor.fullHtml();
             }
+            var html = editor.fullHtml();
             $(".filePath").html(filePath);
             htmlTransf.toHtml(filePath, html);
             document.title = filePath;
