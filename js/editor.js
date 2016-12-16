@@ -323,11 +323,11 @@ $(document).ready(function () {
     }
 
     //开发过程中做测试用,按下alt+r载入xml文件
-    hotkeys('alt+e', function (event, handler) {
-        var evt = document.createEvent("HTMLEvents");
-        evt.initEvent("change", false, true);
-        chooser.dispatchEvent(evt);
-    });
+    // hotkeys('alt+e', function (event, handler) {
+    //     var evt = document.createEvent("HTMLEvents");
+    //     evt.initEvent("change", false, true);
+    //     chooser.dispatchEvent(evt);
+    // });
 
     //导入文件
     var chooser = document.querySelector('#xmlFile');
@@ -338,7 +338,8 @@ $(document).ready(function () {
         console.log(filePath);
         //开发过程中做测试用,按下alt+r载入xml文件
         if (!filePath) {
-            filePath = '/home/lxhao/code/nw/KaiLiReport/report/report.xml';
+            // filePath = '/home/lxhao/code/nw/KaiLiReport/report/report.xml';
+            return;
         }
         $(".div_upload").find("p").text(filePath);
         readFileByPath(filePath);

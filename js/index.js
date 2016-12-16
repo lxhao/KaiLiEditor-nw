@@ -1,14 +1,10 @@
 var gui = require('nw.gui');
 
 var OSX = process.platform === "darwin";
-var userHomeFolder = OSX ? process.env.HOME : process.env.USERPROFILE;
-var mainWindow = nw.Window.get(),
-    trayIcon = OSX ? 'menubar@2x.png' : 'icon.png',
-    trayIconOffline = OSX ? 'offline@2x.png' : 'icon-offline.png',
-    trayIconMissed = OSX ? 'missed@2x.png' : 'missed.png';
+var mainWindow = nw.Window.get();
 
 //任务栏
-var tray = new nw.Tray({icon: trayIconOffline});
+var tray = new nw.Tray({icon: 'icon.png'});
 //任务栏菜单
 var menu = new nw.Menu();
 
@@ -51,10 +47,6 @@ function openAppWindow(onlineURL) {
         nw.App.on('reopen', function () {
             win.show();
         });
-        // tray.on('click', function () {
-        //     win.show();
-        // });
-
         win.window.onload = function () {
             win.maximize();
         };
@@ -64,7 +56,7 @@ function openAppWindow(onlineURL) {
 if (window.process) {
     mainWindow.maximize();
     openAppWindow(nw.App.manifest.onlineURL);
-    menu.append(new nw.MenuItem({label: '调试', click: showDevTools}));
+    // menu.append(new nw.MenuItem({label: '调试', click: showDevTools}));
     menu.append(new nw.MenuItem({label: '退出', click: quit}));
     tray.menu = menu;
     settingShotcuts();
