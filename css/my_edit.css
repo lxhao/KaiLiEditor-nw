@@ -1406,13 +1406,14 @@ a:link {
     background-color: #00a57c;
 }
 
-.zx-mblist-box ul li .title {
+.zx-mblist-box ul li .templateName {
     width: 92%;
     padding: 12px 12px 0 12px;
     color: #6d6d6d;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow-x: visible;
     display: block;
 }
 

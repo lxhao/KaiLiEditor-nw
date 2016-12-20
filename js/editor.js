@@ -22,6 +22,7 @@ var localLang = {
     "declaration": {"type": "value", "zh": "声明：", "en": "Declaration :"},
 };
 
+
 var fs = require("fs");
 var fileSplit = "\\";
 var userHomeFolder = process.env.USERPROFILE;
@@ -30,7 +31,6 @@ if (OSX == "linux" || OSX == "darwin") {
     fileSplit = "/";
     userHomeFolder = process.env.HOME;
 }
-
 //模板文件保存到用户家目录
 // var templateDir = userHomeFolder + fileSplit + '.sonoScapeEditor' + fileSplit + 'template' + fileSplit;
 //模板文件保存到安转目录
@@ -54,21 +54,121 @@ var defaultSettings = {
 
 };
 
-// 初始化信息
-$(function () {
-    /**
-     * 设置语种
-     */
-    function setLanguage(lang) {
-        if ($(".resume_language[value=" + lang + "]").length > 0) {
-            $(".resume_language[value=" + lang + "]").prop("checked", true);
+
+/**
+ * 自定义确认框
+ */
+function resumeConfirm(content, success, cancel) {
+    if (!content)
+        content = "删除后该内容将不可恢复，确认删除吗？";
+    $("#confirmContent").text(content);
+    $('#delModal').modal("show");
+    $("#confirmSuccess").click(function () {
+        if (success) {
+            success();
+            cancel = null;
+            success = null;
+            $('#delModal').modal("hide");
+            $("#confirmSuccess").unbind("click"); // 解除事件
         }
-        if ($("#hidden_data_resume_language").length > 0) {
-            $("#hidden_data_resume_language").val(lang);
+    });
+
+    $("#confirmCancel").click(function () {
+        if (cancel) {
+            cancel();
+            cancel = null;
+            success = null;
+            $('#delModal').modal("hide");
+            $("#confirmCancel").unbind("click");
         }
-        i18n();
+    });
+}
+
+/**
+ * 载入默认模板文件
+ */
+function importDefaultTemplate() {
+    fs.readFile(templateDir + 'default.html', function (err, data) {
+        if (err) {
+            //可能没有设置默认模板文件
+            return;
+        }
+        KindEditor.html('#editor_id', "");
+        KindEditor.html('#editor_id', data.toString());
+    });
+}
+
+/**
+ * 设置快捷键
+ * hotkeys 设置的快捷键不对编辑器生效，故同时调用了编辑器ctrl方法
+ */
+function setHotkeys(scope) {
+    KindEditor.ctrl(scope, 'R', function () {
+        resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
+            nw.Window.get().reload();
+        }, function () {
+        });
+    });
+
+    hotkeys('ctrl+r', function (event, handler) {
+        resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
+            nw.Window.get().reload();
+        }, function () {
+        });
+    });
+
+    //调试用
+    hotkeys('ctrl+shift+r', function (event, handler) {
+        nw.Window.get().reload();
+    });
+
+    function saveHtml() {
+        //当前html文件是否是首次保存
+        var filePath = $(".filePath").text();
+        if (filePath) {
+            var html = editor.fullHtml();
+            fs.writeFile(filePath, html, function (err) {
+                if (err) {
+                    alert("保存失败!");
+                }
+            });
+            layer.msg("文件已保存为" + filePath);
+            document.title = filePath;
+            return;
+        }
+        $(".saveBtn").trigger("click");
     }
 
+    KindEditor.ctrl(scope, 'S', function () {
+        saveHtml();
+    });
+
+    hotkeys('ctrl+s', function (event, handler) {
+        saveHtml();
+    });
+
+    hotkeys('escape', function (event, handler) {
+        //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
+        $('#importReport').modal('hide');
+        $('#settingsPage').modal('hide');
+        $('#model_template_name').modal('hide');
+        $('#changecloseBtn').trigger('click');
+        $('#content').trigger('click');
+    });
+}
+
+/**
+ * 清除空白符
+ */
+function clearBlank(text) {
+    if (!text)
+        return "";
+    text = text.replace(/(^\s+)|(\s+$)/ig, '');
+    return text;
+}
+
+// 初始化信息
+$(function () {
     /**
      * 国际化
      * 注：导出的JS
@@ -142,133 +242,6 @@ $(function () {
     });
 
     /**
-     * 自动保存--两分钟自动保存一次
-     */
-    // setInterval(function () {
-    //     if (save_trigger != undefined && save_trigger) {
-    //         console.log("没有修改---不需要保存");
-    //     } else {
-    //         console.log("有修改---需要保存")
-    //         resumeSave(false);
-    //     }
-    // }, 30 * 1000);
-
-    /**
-     * 线条拉升
-     */
-    var pullLine = null;
-
-    function resumeLinePull() {
-        $(".resume_line").live("mousedown", function () {
-            var $this = $(this);
-            pullLine = new Object();
-            pullLine.x = window.event.clientX;
-            pullLine.y = window.event.clientY;
-            pullLine.width = parseInt($this.css("width"));
-            pullLine.line = $this;
-        });
-
-        $(document).mouseup(function () {
-            if (pullLine)
-                pullLine = null;
-        });
-
-        $(document).mousemove(function (e) {
-            resumeLineDraw(pullLine, window.event.clientX, window.event.clientY);
-            if (dragObject)
-                return false;
-        });
-    }
-
-    /**
-     * 重写线条
-     */
-    function resumeLineDraw(pullLine, x, y) {
-        if (pullLine) {
-            var line = pullLine.line;
-            var ox = pullLine.x;
-            var width = pullLine.width;
-            line.css("width", (x - ox + width) + "px");
-        }
-    }
-
-    /**
-     * 线条工具
-     */
-    var nowLine = null;
-
-    function resumeLine() {
-        $("#line_width").change(function () {
-            var width = $(this).val();
-            if (nowLine) {
-                nowLine.css({"width": width + "px"});
-            } else {
-                notice("请点击线条后再修改！");
-            }
-        });
-        $(".line_style").click(function () {
-            var style = $(this).attr("data-style");
-            if (nowLine) {
-                nowLine.css({"border-top-style": style});
-            } else {
-                notice("请点击线条后再修改！");
-            }
-        });
-        $(".line_width").click(function () {
-            var width = $(this).attr("data-width");
-            if (nowLine) {
-                nowLine.css({"border-top-width": width + "px"});
-            } else {
-                notice("请点击线条后再修改！");
-            }
-        });
-        $(".resume_line").live("click", function () {
-            showModule("line");
-            removeFocus();
-            nowLine = $(this);
-            nowLine.addClass("resume_focus");
-            addFocusStyle(nowLine.css("width"), nowLine.css("border-top-width"), nowLine.css("border-top-color"));
-            $("#line_width").val(parseInt(nowLine.css("width")));
-        });
-    }
-
-
-    /**
-     * 离开时间
-     * save_status:true:保存
-     * save_status:false:编辑后未保存
-     */
-    var save_trigger = true; // 状态
-    function saveNotice(save_status) {
-        if (save_status == undefined)
-            save_status = false;
-        if (save_trigger != save_status) {
-            save_trigger = save_status;
-            if (save_status)
-                $(window).unbind("beforeunload", not_save_notice);
-            else
-                $(window).bind("beforeunload", not_save_notice);
-        }
-    }
-
-// 未保存设置
-    function not_save_notice(event) {
-        return "你有修改内容没有保存，确定要离开吗？";
-    }
-
-    /**
-     * 清除一些\n\r等等
-     */
-    function clearText(text) {
-        if (!text)
-            return "";
-        text = text.replace(/[\n]/ig, '');
-        text = text.replace(/[\r]/ig, '');
-        text = text.replace(/[\t]/ig, '');
-        return text;
-    }
-
-    /**
      * 清除所有的HTMl的标签，计算实际内容字数
      */
     function clearAllHtmlText(text) {
@@ -278,16 +251,6 @@ $(function () {
         text = text.replace(/[\n]/ig, '');
         text = text.replace(/[\r]/ig, '');
         text = text.replace(/[\t]/ig, '');
-        return text;
-    }
-
-    /**
-     * 清除空白符
-     */
-    function clearBlank(text) {
-        if (!text)
-            return "";
-        text = text.replace(/(^\s+)|(\s+$)/ig, '');
         return text;
     }
 
@@ -359,35 +322,51 @@ $(document).ready(function () {
     });
 
     function readFileByPath(filePath) {
+        if (!$(".xmlFilePath").get(0)) {
+            //用来保存文件路径,再次点击保存按钮式可以直接保存
+            var filePathNode = document.createElement('p');
+            $(filePathNode).addClass("xmlFilePath");
+            document.body.appendChild(filePathNode);
+        }
+        $(".xmlFilePath").html(filePath);
         document.title = filePath;
         var fileType = filePath.substring(filePath.lastIndexOf(".") + 1);
         var basePath = filePath.substring(0, filePath.lastIndexOf(fileSplit) + 1);
         if (fileType.toLocaleLowerCase() == "html") {
-            readHtml(filePath);
+            readHtmlByPath(filePath);
             return;
         }
 
-        if (fileType.toLocaleLowerCase() != "xml") {
-            layer.msg("只支持xml或者html文件格式！");
+        if (fileType.toLocaleLowerCase() == "xml") {
+            fs.readFile(filePath, function (err, data) {
+                if (err) {
+                    layer.alert('读取文件失败' + err.message, {
+                        skin: 'layui-layer-lan',
+                        closeBtn: 0,
+                        anim: 4 //动画类型
+                    });
+                    return;
+                }
+                //隐藏导入文件提示框
+                $('#importReport').modal('hide');
+                updateContent(basePath, data);
+            });
             return;
         }
 
-        fs.readFile(filePath, function (err, data) {
-            if (err) {
-                layer.msg("读取文件失败! :" + err.message);
-                return;
-            }
-            //隐藏导入文件提示框
-            $('#importReport').modal('hide');
-            updateContent(basePath, data);
-        });
+        layer.tips("请选择xml或html类型的文件", '#xmlFile');
+
     }
 
     //读取html文件
-    function readHtml(filePath) {
+    function readHtmlByPath(filePath) {
         fs.readFile(filePath, function (err, data) {
             if (err) {
-                layer.msg("读取文件失败! :" + err.message);
+                layer.alert('读取文件失败' + err.message, {
+                    skin: 'layui-layer-lan',
+                    closeBtn: 0,
+                    anim: 4 //动画类型
+                });
                 return;
             }
             //隐藏导入文件提示框
@@ -657,7 +636,11 @@ $(document).ready(function () {
         $("#without_tips").hide();
         fs.readdir(templateDir, function (err, files) {
             if (err) {
-                layer.msg('读取模板文件出错，请检查应用程序下“template"是否存在！');
+                layer.alert('读取模板文件出错，请检查应用程序下“template"是否存在！', {
+                    skin: 'layui-layer-lan',
+                    closeBtn: 0,
+                    anim: 4 //动画类型
+                });
             }
             if (files.length == 0) {
                 $("#without_tips").show();
@@ -677,9 +660,9 @@ $(document).ready(function () {
                     '<img src="../images/close_pop.png" class="del_template" alt="删除" />' +
                     '</div>' +
                     '</div>' +
-                    '<a class="title">{1}</a>' +
+                    '<input class="templateName" value={1} data={2}>' +
                     '</div>';
-                htmlCode = htmlCode.format('file://' + templateDir + imgName, files[i].substring(0, files[i].lastIndexOf('.')));
+                htmlCode = htmlCode.format('file://' + templateDir + imgName, files[i].substring(0, files[i].lastIndexOf('.')), files[i].substring(0, files[i].lastIndexOf('.')));
                 var templateNode = document.createElement('li');
                 $(templateNode).addClass("data_template_list");
                 templateNode.innerHTML = htmlCode;
@@ -687,14 +670,65 @@ $(document).ready(function () {
             }
             chooseTemplateListener();
             delTemplateListener();
+            renameTemplateLintener()
             mbList();
         });
     };
 
+    //重命名模板文件名
+    function renameTemplateLintener() {
+        //鼠标离开时保存用户操作
+        $('.templateName').blur(function () {
+            //data保存了修改前的名字
+            var templateBaseName = templateDir + $(this).attr("data");
+            var templateFilename = templateBaseName + ".html";
+            var templateImgName = templateBaseName + ".png";
+
+            //新模板名
+            var newName = clearBlank($(this).val());
+            if (!newName || newName.length == 0) {
+                layer.alert('模板名不能为空', {
+                    skin: 'layui-layer-lan',
+                    closeBtn: 0,
+                    anim: 4 //动画类型
+                });
+
+                $(this).val($(this).attr('data'));
+                return;
+            }
+
+            if (newName == $(this).attr('data')) {
+                return;
+            }
+            var newBaseName = templateDir + newName;
+
+            //重名检查
+            var nameNodes = $(".templateName");
+            for (var i = 0; i < nameNodes.length; i++) {
+                if ($(this).val() == ((nameNodes.eq(i).attr('data') ))) {
+                    layer.alert('该模板名已存在', {
+                        skin: 'layui-layer-lan',
+                        closeBtn: 0,
+                        anim: 4 //动画类型
+                    });
+                    $(this).val($(this).attr('data'));
+                    return;
+                }
+            }
+
+            fs.rename(templateFilename, newBaseName + ".html", function () {
+                $(this).attr("data", $(this).val());
+            });
+            fs.rename(templateImgName, newBaseName + ".png", function () {
+            });
+            console.log(newBaseName);
+        });
+    }
+
     //删除模板文件
     function delTemplateListener() {
         $(".del_template").click(function () {
-            var templateBaseName = templateDir + $(this).parents(".list-con").children("a").text();
+            var templateBaseName = templateDir + $(this).parents(".list-con").children("input").val();
             var templateFilename = templateBaseName + ".html";
             var templateImgName = templateBaseName + ".png";
             //删除模板文件
@@ -718,18 +752,27 @@ $(document).ready(function () {
     //选择模板文件
     function chooseTemplateListener() {
         $(".change_template").click(function () {
-            var templateBaseName = templateDir + $(this).parents(".list-con").children("a").text();
+            var templateBaseName = templateDir + $(this).parents(".list-con").children("input").val();
             var templateFilename = templateBaseName + ".html";
             console.log(templateFilename);
             fs.readFile(templateFilename, function (err, data) {
                 if (err) {
-                    layer.msg("加载模板出错! :" + err.message);
+                    layer.alert('加载模板出错' + err.message, {
+                        skin: 'layui-layer-lan',
+                        closeBtn: 0,
+                        anim: 4 //动画类型
+                    });
                     return;
                 }
                 KindEditor.html('#editor_id', "");
                 KindEditor.html('#editor_id', data.toString());
                 //隐藏模板列表
                 $('#changecloseBtn').trigger('click');
+                //载入
+                var xmlFilePath = $(".xmlFilePath").html();
+                if (xmlFilePath && xmlFilePath.length > 0) {
+                    readFileByPath(xmlFilePath)
+                }
             });
         });
     }
@@ -749,22 +792,22 @@ $(document).ready(function () {
     $("#saveSettings").click(function () {
         var topSpace = $("#topSpace").get(0).value + "cm";
         if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(topSpace)) {
-            layer.msg("上边距请输入数字或小数！")
+            layer.tips("上边距请输入数字或小数！", '#topSpace')
             return;
         }
         var bottomSpace = $("#bottomSpace").get(0).value + "cm";
         if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(bottomSpace)) {
-            layer.msg("下边距请输入数字或小数！")
+            layer.tips("下边距请输入数字或小数！", '#bottomSpace')
             return;
         }
         var leftSpace = $("#leftSpace").get(0).value + "cm";
         if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(leftSpace)) {
-            layer.msg("左边距请输入数字或小数！")
+            layer.tips("左边距请输入数字或小数！", "#leftSpace")
             return;
         }
         var rightSpace = $("#rightSpace").get(0).value + "cm";
         if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(rightSpace)) {
-            layer.msg("右边距请输入数字或小数！")
+            layer.tips("右边距请输入数字或小数！", "#rightSpace")
             return;
         }
 
@@ -779,7 +822,7 @@ $(document).ready(function () {
         //分隔线厚度
         var lineSize = $("#lineSize").get(0).value + "pt";
         if (!/^[1-9]\d*(pt)$/.test(lineSize)) {
-            layer.msg("线条大小请输入大于0的整数！")
+            layer.tips("线条大小请输入大于0的整数！", "#lineSize")
             return;
         }
         var lineNodes = $(editerDocument.body).find(".line");
@@ -793,7 +836,7 @@ $(document).ready(function () {
         var imgWidth = "auto";
         var imgGap = $("#imgGap").get(0).value + "cm";
         if (!/^[1-9]\d*\.\d+(cm)$|0\.\d*[1-9]\d*(cm)$|^[1-9]\d*(cm)$/.test(imgGap)) {
-            layer.msg("图片间距请输入数字或小数！")
+            layer.tips("图片间距请输入数字或小数！", "#imgGap")
             return;
         }
         imgNodes = $(editerDocument.body).find(".IMG1");
@@ -950,7 +993,10 @@ $(document).ready(function () {
         }));
         menu1.append(new gui.MenuItem({
             icon: 'imgs/cut.png', label: '重新载入', click: function () {
-                win.reload();
+                resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
+                    nw.Window.get().reload();
+                }, function () {
+                });
             }
         }));
         win.window.addEventListener('contextmenu', function (ev) {
@@ -972,35 +1018,6 @@ $(document).ready(function () {
         }
 
     });
-
-    /**
-     * 自定义确认框
-     */
-    function resumeConfirm(content, success, cancel) {
-        if (!content)
-            content = "删除后该内容将不可恢复，确认删除吗？";
-        $("#confirmContent").text(content);
-        $('#delModal').modal("show");
-        $("#confirmSuccess").click(function () {
-            if (success) {
-                success();
-                cancel = null;
-                success = null;
-                $('#delModal').modal("hide");
-                $("#confirmSuccess").unbind("click"); // 解除事件
-            }
-        });
-
-        $("#confirmCancel").click(function () {
-            if (cancel) {
-                cancel();
-                cancel = null;
-                success = null;
-                $('#delModal').modal("hide");
-                $("#confirmCancel").unbind("click");
-            }
-        });
-    }
 
 
 // KindEditor.ready(function () {

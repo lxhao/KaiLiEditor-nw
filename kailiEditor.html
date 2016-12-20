@@ -191,8 +191,8 @@
         </div>
         <div class="center">
             <div class="changeInput"><input type="text" id="resumeTitle" placeholder="点击修改简历名称"
-                                            data_value="中南大学"
-                                            value="中南大学"></div>
+                                            data_value="开立医疗"
+                                            value="开立医疗"></div>
             <input type="hidden" id="hidden_data_resume_language" value="zh"/>
         </div>
         <div class="right">
@@ -476,64 +476,6 @@
     <!--注意-->
     <!--编辑器初始化代码如果放到js文件中，会显著拖慢编辑器初始化速度-->
     <script>
-        /**
-         * 设置快捷键
-         * hotkeys 设置的快捷键不对编辑器生效，故同时调用了编辑器ctrl方法
-         */
-        function setHotkeys(scope) {
-            KindEditor.ctrl(scope, 'R', function () {
-                resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
-                    nw.Window.get().reload();
-                }, function () {
-                });
-            });
-
-            hotkeys('ctrl+r', function (event, handler) {
-                resumeConfirm("当前修改的内容没有保存,确认要重新加载数据？", function () {
-                    nw.Window.get().reload();
-                }, function () {
-                });
-            });
-
-            //调试用
-            hotkeys('ctrl+shift+r', function (event, handler) {
-                nw.Window.get().reload();
-            });
-
-            function saveHtml() {
-                //当前html文件是否是首次保存
-                var filePath = $(".filePath").text();
-                if (filePath) {
-                    var html = editor.fullHtml();
-                    fs.writeFile(filePath, html, function (err) {
-                        if (err) {
-                            alert("保存失败!");
-                        }
-                    });
-                    layer.msg("文件已保存为" + filePath);
-                    document.title = filePath;
-                    return;
-                }
-                $(".saveBtn").trigger("click");
-            }
-
-            KindEditor.ctrl(scope, 'S', function () {
-                saveHtml();
-            });
-
-            hotkeys('ctrl+s', function (event, handler) {
-                saveHtml();
-            });
-
-            hotkeys('escape', function (event, handler) {
-                //隐藏导入文件提示框,隐藏设置界面，隐藏模板列表
-                $('#importReport').modal('hide');
-                $('#settingsPage').modal('hide');
-                $('#model_template_name').modal('hide');
-                $('#changecloseBtn').trigger('click');
-            });
-        }
-
         KindEditor.ready(function (K) {
             var options = {
                 filterMode: false,
@@ -552,6 +494,7 @@
             window.editor = K.create('#editor_id', options);
             var editerDocument = window.editor.edit.iframe.get().contentWindow.document;
             setHotkeys(editerDocument);
+            importDefaultTemplate();
         });
     </script>
 </div>
